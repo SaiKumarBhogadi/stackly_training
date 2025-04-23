@@ -1207,6 +1207,8 @@
 
 .stackly-form-section {
     padding: 30px 10%;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1343,6 +1345,8 @@
 
   
   .finance-wrapper {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
     background-color: #e4f2fd;
     padding: 50px 0;
   }
@@ -1482,6 +1486,8 @@
 
   .faq-container {
     width: 80%;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
     max-width: 1200px;
     margin: 20px auto;
     padding: 0;
