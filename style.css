@@ -131,265 +131,506 @@
   }
 
 
-  .hero {
-    background: linear-gradient(135deg, #1E3A8A 0%, #2DD4BF 100%);
-    color: white;
-    padding: 4rem 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+
+
+  .slider-container {
     position: relative;
-    min-height: 400px;
-}
-
-.hero-content {
-    max-width: 50%;
     width: 100%;
-    padding-right: 2rem;
+    height: 80vh;
+    overflow: hidden;
 }
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
-}
-
-.details {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    max-width: 100%; /* Removed fixed width for responsiveness */
-}
-
-.calendar-section {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 1rem;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
+.slides {
     display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    max-width: 100%; /* Ensures it adapts to container */
-}
-
-.calendar-date {
-    background: #10B981;
     color: white;
-    padding: 1rem;
-    border-radius: 10px;
     text-align: center;
-    min-width: 80px;
-    flex-shrink: 0; /* Prevents shrinking on small screens */
+    padding: 20px;
 }
-
-.calendar-date .day {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.calendar-date .month {
-    font-size: 0.9rem;
+.overlay h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
     text-transform: uppercase;
 }
-
-.calendar-info {
-    flex-grow: 1;
-    text-align: left;
+.overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    max-width: 600px;
 }
-
-.calendar-info p {
-    margin: 0;
+.overlay button {
+    padding: 10px 20px;
     font-size: 1rem;
-}
-
-.calendar-info .schedule {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-.cta-button {
-    background-color: #10B981;
+    background-color: #ff4d4d;
     color: white;
-    padding: 0.75rem 2rem;
     border: none;
-    border-radius: 25px;
-    font-size: 1.1rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s;
 }
-
-.cta-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+.overlay button:hover {
+    background-color: #e60000;
 }
-
-.hero-image {
-    max-width: 40%;
-    height: auto;
-    object-fit: cover;
-}
-
-.decorative-circles {
+.dots {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
     border-radius: 50%;
-    animation: pulse 6s infinite;
+    display: inline-block;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #717171;
 }
 
-.circle-1 { top: 10%; left: 10%; }
-.circle-2 { bottom: 10%; right: 10%; }
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
-/* Enhanced Responsive Design */
-@media (max-width: 1024px) {
-    .hero {
-        padding: 3rem 10%;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .hero p {
-        font-size: 1.1rem;
-    }
-    .hero-content {
-        max-width: 60%;
-        padding-right: 1.5rem;
-    }
-    .hero-image {
-        max-width: 35%;
-    }
-    .calendar-date {
-        min-width: 70px;
-        padding: 0.8rem;
-    }
-    .calendar-date .day {
-        font-size: 1.3rem;
-    }
-    .cta-button {
-        padding: 0.6rem 1.8rem;
-        font-size: 1rem;
-    }
-    .decorative-circles {
-        width: 80px;
-        height: 80px;
-    }
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 2rem 10%;
-        text-align: center;
+    .slider-container {
+        height: 60vh;
     }
-    .hero-content {
-        max-width: 100%;
-        padding-right: 0;
-        margin-bottom: 2rem;
+    .overlay h2 {
+        font-size: 1.8rem;
     }
-    .hero-image {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-    .details {
-        padding: 0.8rem;
-    }
-    .calendar-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-        padding: 0.8rem;
-    }
-    .calendar-date {
-        min-width: 60px;
-        padding: 0.6rem;
-        margin-bottom: 0.5rem;
-    }
-    .calendar-date .day {
-        font-size: 1.2rem;
-    }
-    .calendar-date .month {
-        font-size: 0.8rem;
-    }
-    .calendar-info {
-        text-align: center;
-    }
-    .calendar-info .schedule {
-        font-size: 0.8rem;
-    }
-    .cta-button {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
-    }
-    .decorative-circles {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 1.5rem 10%;
-        min-height: 300px;
-    }
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    .hero p {
-        font-size: 0.9rem;
-    }
-    .hero-image {
+    .overlay p {
+        font-size: 1rem;
         max-width: 90%;
     }
-    .details {
-        padding: 0.6rem;
-    }
-    .details p {
+    .overlay button {
+        padding: 8px 16px;
         font-size: 0.9rem;
     }
-    .calendar-section {
-        padding: 0.6rem;
-        gap: 0.5rem;
+}
+@media (max-width: 480px) {
+    .slider-container {
+        height: 50vh;
     }
-    .calendar-date {
-        min-width: 50px;
-        padding: 0.4rem;
+    .overlay h2 {
+        font-size: 1.4rem;
     }
-    .calendar-date .day {
-        font-size: 1rem;
-    }
-    .calendar-date .month {
-        font-size: 0.7rem;
-    }
-    .calendar-info p {
+    .overlay p {
         font-size: 0.9rem;
     }
-    .calendar-info .schedule {
-        font-size: 0.7rem;
-    }
-    .cta-button {
-        padding: 0.4rem 1.2rem;
+    .overlay button {
+        padding: 6px 12px;
         font-size: 0.8rem;
-    }
-    .decorative-circles {
-        width: 50px;
-        height: 50px;
     }
 }
 
+
+
+
+
+
+      /* Course Section Styles */
+      .course-section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+    .course-section h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #1E3A8A;
+        margin-bottom: 30px;
+    }
+    .course-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .course-header .tabs {
+        display: flex;
+        gap: 15px;
+    }
+    .course-header .tabs button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 20px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .course-header .tabs button.active {
+        background-color: #ffd700;
+        color: #333;
+    }
+    .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        justify-items: start;
+    }
+    .course-card {
+        background-color: #f5faff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: none;
+        width: 100%;
+        max-width: 340px;
+    }
+    .course-card.show {
+        display: block;
+    }
+    .course-card i {
+        font-size: 2.5rem;
+        color: #1E3A8A;
+        margin-bottom: 10px;
+    }
+    .course-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    .course-card .details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        color: #666;
+    }
+    .course-card .details span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .course-card .buttons {
+        display: flex;
+        gap: 10px;
+    }
+    .course-card .buttons button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .course-card .buttons .view-btn {
+        background-color: #e0e7ff;
+        color: #333;
+    }
+    .course-card .buttons .apply-btn {
+        background-color: #1E3A8A;
+        color: white;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+        background: linear-gradient(135deg, #1E3A8A 0%, #2DD4BF 100%);
+        color: white;
+        padding: 4rem 10%;
+        display: none; /* Initially hidden */
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        min-height: 400px;
+    }
+    .hero.active {
+        display: flex; /* Show when active */
+    }
+    .hero-content {
+        max-width: 50%;
+        width: 100%;
+        padding-right: 2rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.9;
+    }
+    .details {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+    .calendar-section {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        max-width: 100%;
+    }
+    .calendar-date {
+        background: #10B981;
+        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        min-width: 80px;
+        flex-shrink: 0;
+    }
+    .calendar-date .day {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .calendar-date .month {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+    }
+    .calendar-info {
+        flex-grow: 1;
+        text-align: left;
+    }
+    .calendar-info p {
+        margin: 0;
+        font-size: 1rem;
+    }
+    .calendar-info .schedule {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+    .cta-button {
+        background-color: #10B981;
+        color: white;
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .cta-button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+    }
+    .hero-image {
+        max-width: 40%;
+        height: auto;
+        object-fit: cover;
+    }
+    .decorative-circles {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: pulse 6s infinite;
+    }
+    .circle-1 { top: 10%; left: 10%; }
+    .circle-2 { bottom: 10%; right: 10%; }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    /* Responsive Design for Course Section */
+    @media (max-width: 768px) {
+        .course-section {
+            width: 90%;
+        }
+        .course-section h1 {
+            font-size: 2rem;
+        }
+        .course-header {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .course-header .tabs {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .course-grid {
+            justify-items: center;
+        }
+    }
+    @media (max-width: 480px) {
+        .course-section h1 {
+            font-size: 1.5rem;
+        }
+        .course-card {
+            padding: 15px;
+            max-width: 300px;
+        }
+        .course-card h3 {
+            font-size: 16px;
+        }
+        .course-card .details {
+            font-size: 12px;
+        }
+        .course-card .buttons button {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+    }
+
+    /* Responsive Design for Hero Section */
+    @media (max-width: 1024px) {
+        .hero {
+            padding: 3rem 10%;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+        }
+        .hero-content {
+            max-width: 60%;
+            padding-right: 1.5rem;
+        }
+        .hero-image {
+            max-width: 35%;
+        }
+        .calendar-date {
+            min-width: 70px;
+            padding: 0.8rem;
+        }
+        .calendar-date .day {
+            font-size: 1.3rem;
+        }
+        .cta-button {
+            padding: 0.6rem 1.8rem;
+            font-size: 1rem;
+        }
+        .decorative-circles {
+            width: 80px;
+            height: 80px;
+        }
+    }
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+            padding: 2rem 10%;
+            text-align: center;
+        }
+        .hero-content {
+            max-width: 100%;
+            padding-right: 0;
+            margin-bottom: 2rem;
+        }
+        .hero-image {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .details {
+            padding: 0.8rem;
+        }
+        .calendar-section {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+        }
+        .calendar-date {
+            min-width: 60px;
+            padding: 0.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .calendar-date .day {
+            font-size: 1.2rem;
+        }
+        .calendar-date .month {
+            font-size: 0.8rem;
+        }
+        .calendar-info {
+            text-align: center;
+        }
+        .calendar-info .schedule {
+            font-size: 0.8rem;
+        }
+        .cta-button {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+        }
+        .decorative-circles {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    @media (max-width: 480px) {
+        .hero {
+            padding: 1.5rem 10%;
+            min-height: 300px;
+        }
+        .hero h1 {
+            font-size: 1.5rem;
+        }
+        .hero p {
+            font-size: 0.9rem;
+        }
+        .hero-image {
+            max-width: 90%;
+        }
+        .details {
+            padding: 0.6rem;
+        }
+        .details p {
+            font-size: 0.9rem;
+        }
+        .calendar-section {
+            padding: 0.6rem;
+            gap: 0.5rem;
+        }
+        .calendar-date {
+            min-width: 50px;
+            padding: 0.4rem;
+        }
+        .calendar-date .day {
+            font-size: 1rem;
+        }
+        .calendar-date .month {
+            font-size: 0.7rem;
+        }
+        .calendar-info p {
+            font-size: 0.9rem;
+        }
+        .calendar-info .schedule {
+            font-size: 0.7rem;
+        }
+        .cta-button {
+            padding: 0.4rem 1.2rem;
+            font-size: 0.8rem;
+        }
+        .decorative-circles {
+            width: 50px;
+            height: 50px;
+        }
+    }
 
 
 
@@ -559,7 +800,7 @@
 .skill-item i {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #10B981;
+    color: #1E3A8A;
 }
 
 .skill-item h3 {

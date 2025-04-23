@@ -33,27 +33,159 @@
   </div>
   
 
-  <section class="hero">
+
+
+  <div class="slider-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="./images/slider2.jpg" alt="Slide 1">
+            <div class="overlay">
+                <h2>Web Development Mastery</h2>
+                <p>Learn HTML, CSS, JavaScript, and more to build stunning websites from scratch.</p>
+                <button onclick="window.location.href='#enroll'">Enroll Now</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./images/slider3.jpg" alt="Slide 2">
+            <div class="overlay">
+                <h2>Data Science Fundamentals</h2>
+                <p>Dive into Python, data analysis, and machine learning to kickstart your career.</p>
+                <button onclick="window.location.href='#enroll'">Enroll Now</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./images/slider4.jpg" alt="Slide 3">
+            <div class="overlay">
+                <h2>Digital Marketing Pro</h2>
+                <p>Master SEO, social media, and analytics to grow your online presence.</p>
+                <button onclick="window.location.href='#enroll'">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+</div>
+
+
+
+
+<section class="course-section">
+    <h1>Explore Our Courses</h1>
+    <div class="course-header">
+        <div class="tabs">
+            <button class="active" onclick="showCategory('technology')">Technology</button>
+            <button onclick="showCategory('digital-marketing')">Digital Marketing</button>
+        </div>
+    </div>
+    <div class="course-grid">
+        <!-- Technology Courses -->
+        <div class="course-card technology show" data-course="front-end">
+            <i class="fas fa-code"></i>
+            <h3>Front End Development</h3>
+            <div class="details">
+                <span>💰 Rs.30,000 + 18% GST</span>
+                <span>⏳ 6 Weeks</span>
+                <span>📅 Upcoming Batch: May 2, 2025</span>
+            </div>
+            <div class="buttons">
+                <button class="view-btn" onclick="showCourseDetails('front-end')">View</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="course-card technology show" data-course="full-stack">
+            <i class="fas fa-layer-group"></i>
+            <h3>Full Stack Development</h3>
+            <div class="details">
+                <span>💰 Rs.45,000 + 18% GST</span>
+                <span>⏳ 12 Weeks</span>
+                <span>📅 Upcoming Batch: May 2, 2025</span>
+            </div>
+            <div class="buttons">
+                <button class="view-btn" onclick="showCourseDetails('full-stack')">View</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="course-card technology show" data-course="software-testing">
+            <i class="fas fa-bug"></i>
+            <h3>Software Testing</h3>
+            <div class="details">
+                <span>💰 Rs.25,000 + 18% GST</span>
+                <span>⏳ 4 Weeks</span>
+                <span>📅 Upcoming Batch: May 2, 2025</span>
+            </div>
+            <div class="buttons">
+                <button class="view-btn" onclick="showCourseDetails('software-testing')">View</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="course-card technology show" data-course="java-developer">
+            <i class="fab fa-java"></i>
+            <h3>Java Developer</h3>
+            <div class="details">
+                <span>💰 Rs.40,000 + 18% GST</span>
+                <span>⏳ 8 Weeks</span>
+                <span>📅 Upcoming Batch: May 2, 2025</span>
+            </div>
+            <div class="buttons">
+                <button class="view-btn" onclick="showCourseDetails('java-developer')">View</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="course-card technology show" data-course="python-developer">
+            <i class="fab fa-python"></i>
+            <h3>Python Developer</h3>
+            <div class="details">
+                <span>💰 Rs.35,000 + 18% GST</span>
+                <span>⏳ 8 Weeks</span>
+                <span>📅 Upcoming Batch: May 2, 2025</span>
+            </div>
+            <div class="buttons">
+                <button class="view-btn" onclick="showCourseDetails('python-developer')">View</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <!-- Digital Marketing Course -->
+        <div class="course-card digital-marketing" data-course="digital-marketing">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Digital Marketing</h3>
+            <div class="details">
+                <span>💰 Rs.55,000 + 18% GST</span>
+                <span>⏳ 12 Weeks</span>
+                <span>📅 Upcoming Batch: May 2, 2025</span>
+            </div>
+            <div class="buttons">
+                <button class="view-btn" onclick="showCourseDetails('digital-marketing')">View</button>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hero Section for Course Details -->
+<section class="hero" id="course-details">
     <div class="hero-content">
-        <h1>Front-end Dev with React & GenAI</h1>
-        <p>Master advanced skills with a 24-week online program.</p>
+        <h1 id="course-title">Front End Development</h1>
+        <p id="course-description">Master advanced skills with a 6-week online program.</p>
         <div class="details">
-            <p><strong>Fees:</strong> ₹70,000 + 18% GST</p>
+            <p><strong>Fees:</strong> <span id="course-fees">₹30,000 + 18% GST</span></p>
             <p><strong>Placement Opportunities</strong></p>
         </div>
         <div class="calendar-section">
             <div class="calendar-date">
-                <div class="day">31</div>
-                <div class="month">May</div>
+                <div class="day" id="course-day">2</div>
+                <div class="month" id="course-month">May</div>
             </div>
             <div class="calendar-info">
                 <p><strong>Upcoming Batch:</strong></p>
-                <p class="schedule">Mon, Tue, Thu, Fri, 07:30 PM to 09:30 PM</p>
+                <p class="schedule" id="course-schedule">Mon, Tue, Thu, Fri, 07:30 PM to 09:30 PM</p>
             </div>
         </div>
         <button class="cta-button">Enroll Now</button>
     </div>
-    <img src="./images/banner-right.jpg" alt="Hero Image" class="hero-image">
+    <img src="./images/course.jpg" alt="Hero Image" class="hero-image">
     <div class="decorative-circles circle-1"></div>
     <div class="decorative-circles circle-2"></div>
 </section>
@@ -107,34 +239,34 @@
     <h2>Skills You Gain</h2>
     <div class="skills-grid">
         <div class="skill-item">
-            <i class="fas fa-coffee"></i>
-            <h3>Java Programming</h3>
-            <p>Build applications with core Java skills.</p>
-        </div>
-        <div class="skill-item">
             <i class="fas fa-code"></i>
-            <h3>HTML5 Development</h3>
+            <h3>Front End Development</h3>
             <p>Build responsive web applications.</p>
         </div>
         <div class="skill-item">
-            <i class="fas fa-laptop-code"></i>
-            <h3>JavaScript Mastery</h3>
-            <p>Create dynamic web components.</p>
+            <i class="fas fa-layer-group"></i>
+            <h3>Full Stack Development</h3>
+            <p>Create full-scale websites and apps.</p>
         </div>
         <div class="skill-item">
-            <i class="fas fa-paint-brush"></i>
-            <h3>CSS3 Styling</h3>
-            <p>Design visually appealing user interfaces.</p>
+            <i class="fas fa-bug"></i>
+            <h3>Software Testing</h3>
+            <p>Identify bugs through manual and automated testing.</p>
         </div>
         <div class="skill-item">
-            <i class="fab fa-react"></i>
-            <h3>React Framework</h3>
-            <p>Build scalable single-page applications.</p>
+            <i class="fab fa-java"></i>
+            <h3>Java Developer</h3>
+            <p>Build applications with core Java skills.</p>
         </div>
         <div class="skill-item">
-            <i class="fas fa-brain"></i>
-            <h3>Gen AI Integration</h3>
-            <p>Transform apps with intelligent features.</p>
+            <i class="fab fa-python"></i>
+            <h3>Python Developer</h3>
+            <p>Write efficient code for scalable applications.</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Digital Marketing</h3>
+            <p>Improve website ranking with SEO optimization.</p>
         </div>
     </div>
 </section>
