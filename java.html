@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <script src="https://kit.fontawesome.com/e03681e89c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="" height="40px"></a></div>
+    <div class="right">
+     <a href="#courses"> <button class="courses">Courses</button> </a>
+      <!-- <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a> -->
+      <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
+      <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a>
+    </div>
+  </div>
+
+  <!-- Nav Bar -->
+  <div class="nav-bar">
+    <a href="./front-end.html">Front-End Development</a>
+    <a href="./fullstack.html">Full Stack Development</a>
+    <a href="./testing.html">Software Testing</a>
+    <a href="./python.html">Python Developer</a>
+    <a href="./java.html">Java Developer</a>
+    <a href="./marketing.html">Digital Marketing</a>
+  </div>
+
+
+  <section class="hero" id="course-details">
+    <div class="hero-content">
+        <h1 id="course-title">Java Developer</h1>
+        <p id="course-description">Become a Java expert with an 8-week online program.</p>
+        <div class="details">
+            <p><strong>Fees:</strong> <span id="course-fees">Rs.40,000 + 18% GST</span></p>
+            <p><strong>Placement Opportunities</strong></p>
+        </div>
+        <div class="calendar-section">
+            <div class="calendar-date">
+                <div class="day" id="course-day">2</div>
+                <div class="month" id="course-month">May</div>
+            </div>
+            <div class="calendar-info">
+                <p><strong>Upcoming Batch: May 2, 2025</strong></p>
+                <p class="schedule" id="course-schedule">Mon, Wed, Fri, 07:00 PM to 09:00 PM</p>
+            </div>
+        </div>
+        <button class="cta-button">Enroll Now</button>
+    </div>
+    <img src="./images/java.jpg" alt="Hero Image" class="hero-image">
+    <div class="decorative-circles circle-1"></div>
+    <div class="decorative-circles circle-2"></div>
+</section>
+
+
+<section class="advantage-section" id="advantage">
+    <h2>The Stackly Advantage</h2>
+    <p class="subtitle">Turning ambitions into achievements</p>
+    <div class="content-wrapper">
+        <div class="certificate">
+            <img src="./images/certificate.jpg" alt="Stackly Certificate">
+        </div>
+        <div class="benefits">
+            <div class="benefit-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                <p>Expert-led learning – gain insights from industry leaders and innovators.</p>
+            </div>
+            <div class="benefit-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 10.5h-2V15h2v-1.5zm0-2.5h-2v-2h2v2z"/></svg>
+                <p>Projects through individual or group presentations to build real-world skills.</p>
+            </div>
+            <div class="benefit-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                <p>Global competence – Stackly certifications ensure job readiness from day one.</p>
+            </div>
+            <div class="benefit-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <p>Industry-aligned training – learn through real-world applications.</p>
+            </div>
+            <div class="benefit-item">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm6 10H6v-1.53c0-2.5 3.97-3.58 6-3.58s6 1.08 6 3.58V18zm-6-3c-1.31 0-3 .84-3 1.47V17h6v-.53c0-.63-1.69-1.47-3-1.47z"/></svg>
+                <p>Built-in placement assistance to kickstart your career.</p>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <strong>100%</strong>
+                    <span>Eligible learners placed*</span>
+                </div>
+                <div class="stat">
+                    <strong>₹6 LPA</strong>
+                    <span>Kickstart your career with salaries up to*</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="skills-section" id="skills">
+    <h2>Skills You Gain</h2>
+    <div class="skills-grid">
+        <div class="skill-item">
+            <i class="fab fa-java"></i>
+            <h3>Java Fundamentals</h3>
+            <p>Master Java syntax and basic programming.</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-code-branch"></i>
+            <h3>Control Flow</h3>
+            <p>Implement conditionals and loops effectively.</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-list"></i>
+            <h3>Arrays & Strings</h3>
+            <p>Manipulate arrays and text data.</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-object-group"></i>
+            <h3>OOP in Java</h3>
+            <p>Design scalable code with OOP principles.</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Exception & File Handling</h3>
+            <p>Handle errors and manage file operations.</p>
+        </div>
+        <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <h3>JDBC with PostgreSQL</h3>
+            <p>Integrate Java with relational databases.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="learn-section" id="learn">
+    <h2>What You'll Learn</h2>
+    <div class="learn-grid">
+        <div class="learn-item">
+            <i class="fab fa-java" style="color: #FBBF24;"></i>
+            <h3>Java Basics</h3>
+            <p>Learn syntax and build an arithmetic calculator.</p>
+        </div>
+        <div class="learn-item">
+            <i class="fas fa-code-branch" style="color: #FBBF24;"></i>
+            <h3>Control Flow</h3>
+            <p>Master loops and conditions with a palindrome checker.</p>
+        </div>
+        <div class="learn-item">
+            <i class="fas fa-list" style="color: #FBBF24;"></i>
+            <h3>Arrays & Strings</h3>
+            <p>Work with arrays and strings using a word counter.</p>
+        </div>
+        <div class="learn-item">
+            <i class="fas fa-object-group" style="color: #FBBF24;"></i>
+            <h3>OOP Principles</h3>
+            <p>Build a library app with classes and inheritance.</p>
+        </div>
+        <div class="learn-item">
+            <i class="fas fa-exclamation-triangle" style="color: #FBBF24;"></i>
+            <h3>Exception & File Handling</h3>
+            <p>Create a file-based note app with error handling.</p>
+        </div>
+        <div class="learn-item">
+            <i class="fas fa-database" style="color: #FBBF24;"></i>
+            <h3>JDBC with PostgreSQL</h3>
+            <p>Manage a product database with JDBC.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="eligibility-section" id="eligible">
+    <h2>Am I Eligible to Apply?</h2>
+    <div class="eligibility-flow">
+        <div class="eligibility-item">
+            <i class="fas fa-unlock-alt" style="color: #FBBF24;"></i>
+            <h3>Unlock Your Future</h3>
+            <p><strong>Exciting opportunities!</strong><br>If you have completed class X, XII, and graduation, you're eligible.</p>
+        </div>
+        <div class="eligibility-item">
+            <i class="fas fa-graduation-cap" style="color: #FBBF24;"></i>
+            <h3>Who Can Join</h3>
+            <p>Open to BE/B.Tech, BCA, B.Sc, MCA, M.Sc, and B.Com graduates in relevant fields.</p>
+        </div>
+        <div class="eligibility-item">
+            <i class="fas fa-question-circle" style="color: #FBBF24;"></i>
+            <h3>Get More Info</h3>
+            <p>Explore placement assistance—check our FAQs for details!</p>
+        </div>
+    </div>
+    <div class="enroll-flow">
+        <h2>Enroll in Just a Few Easy Steps!</h2>
+        <div class="step-path">
+            <div class="step-node">
+                <div class="step-circle">1</div>
+                <p>Fill Application</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-node">
+                <div class="step-circle">2</div>
+                <p>Get Screened</p>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-node">
+                <div class="step-circle">3</div>
+                <p>Pay Fees</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="apply">
+<form class="stackly-form-section" >
+    <h2 class="stackly-form-heading">1. Application</h2>
+  
+    <div class="stackly-form-grid">
+      <div class="stackly-form-group">
+        <input type="text" placeholder="*Full name (Please enter name as per aadhaar)" class="stackly-input" required>
+      </div>
+  
+      <div class="stackly-form-group">
+        <input type="email" placeholder="*Email ID e.g. rakesh.sharma@gmail.com" class="stackly-input" required>
+      </div>
+  
+      <div class="stackly-form-group">
+        <input type="text" placeholder="Enter city name" class="stackly-input">
+      </div>
+  
+      <div class="stackly-form-group">
+        <div class="stackly-phone-wrapper">
+          <span class="stackly-phone-code">+91</span>
+          <input type="tel" placeholder="Enter phone number" class="stackly-phone-input" required>
+          <button type="button" class="stackly-get-otp-btn">Get OTP</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="stackly-checkbox-row">
+      <label class="stackly-checkbox-label">
+        <input type="checkbox" checked>
+        I agree to receive updates on 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="16" />
+        WhatsApp
+      </label>
+      <label class="stackly-checkbox-label">
+        <input type="checkbox">
+        I agree to <a href="#" style="color:#0071bc">Privacy Policy</a> & overriding DNC/NDNC for Call/SMS.
+      </label>
+    </div>
+  
+    <button type="submit" class="stackly-submit-btn">Submit and proceed</button>
+  </form>
+</div>
+  
+
+
+
+  
+
+
+
+
+
+<section class="is-testimonials-section">
+    <div class="is-testimonials-container">
+        <h2 class="is-testimonials-subtitle">Learner Success Stories</h2>
+        <h1 class="is-testimonials-title">Happy With Expertise</h1>
+        <div class="is-testimonials-slider">
+            <div class="is-testimonials-wrapper">
+                <div class="is-testimonial-card">
+                    <blockquote>
+                        <p>“The Java Developer course taught me OOP and JDBC, helping me build a payroll system for my company in Hyderabad!”</p>
+                        <cite>Rakesh Pillai</cite>
+                    </blockquote>
+                </div>
+                <div class="is-testimonial-card">
+                    <blockquote>
+                        <p>“Mastering Java collections and exception handling got me a developer job at a Coimbatore tech firm!”</p>
+                        <cite>Meera Iyer</cite>
+                    </blockquote>
+                </div>
+                <div class="is-testimonial-card">
+                    <blockquote>
+                        <p>“The hands-on PostgreSQL integration project boosted my confidence in handling database-driven apps.”</p>
+                        <cite>Pradeep Menon</cite>
+                    </blockquote>
+                </div>
+                <div class="is-testimonial-card">
+                    <blockquote>
+                        <p>“Learning control flow and arrays made debugging my Java code a breeze—great course!”</p>
+                        <cite>Sneha Krishnan</cite>
+                    </blockquote>
+                </div>
+                <div class="is-testimonial-card">
+                    <blockquote>
+                        <p>“The capstone project with Git and PostgreSQL prepared me for real-world Java development.”</p>
+                        <cite>Arjun Varghese</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="is-testimonials-dots">
+            <!-- Dots will be dynamically generated by JavaScript -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="footer-wrapper">
+    <footer class="custom-footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="https://via.placeholder.com/100x60" alt="Custom Logo">
+                <p>Empowering learning and innovation since 2025.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="mailto:support@example.com">support@example.com</a></li>
+                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li><a href="#">123 Learning St, Tech City</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Custom Learning Platform. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+</div>
+
+
+
+<script>
+            
+    document.addEventListener('DOMContentLoaded', function() {
+        const wrapper = document.querySelector('.is-testimonials-wrapper');
+        const cards = document.querySelectorAll('.is-testimonial-card');
+        const dotsContainer = document.querySelector('.is-testimonials-dots');
+        let currentIndex = 0;
+        const totalCards = cards.length;
+    
+        // Function to calculate cards per view based on screen size
+        function getCardsPerView() {
+            return window.innerWidth <= 768 ? 1 : 2; // 1 card on mobile, 2 on larger screens
+        }
+    
+        let cardsPerView = getCardsPerView();
+        let totalSlides = Math.ceil(totalCards / cardsPerView);
+    
+        // Dynamically generate dots based on the number of slides
+        function generateDots() {
+            dotsContainer.innerHTML = ''; // Clear existing dots
+            totalSlides = Math.ceil(totalCards / cardsPerView);
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('is-testimonial-dot');
+                if (i === 0) dot.classList.add('active');
+                dotsContainer.appendChild(dot);
+            }
+        }
+    
+        // Initial dot generation
+        generateDots();
+    
+        function showSlide(index) {
+            // Ensure the index stays within bounds
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+    
+            // Calculate the transform percentage based on cards per view
+            const translateX = -(currentIndex * (100 / cardsPerView));
+            wrapper.style.transform = `translateX(${translateX}%)`;
+    
+            // Update active dot
+            const dots = document.querySelectorAll('.is-testimonial-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+    
+        // Event listeners for dots
+        function setupDotListeners() {
+            const dots = document.querySelectorAll('.is-testimonial-dot');
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                });
+            });
+        }
+    
+        // Initial setup
+        setupDotListeners();
+    
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000);
+    
+        // Handle window resize to adjust cards per view
+        window.addEventListener('resize', () => {
+            const newCardsPerView = getCardsPerView();
+            if (newCardsPerView !== cardsPerView) {
+                cardsPerView = newCardsPerView;
+                generateDots(); // Regenerate dots based on new cards per view
+                setupDotListeners(); // Reattach event listeners
+                showSlide(currentIndex); // Recalculate slide position on resize
+            }
+        });
+    });
+    
+    </script>
+
+<script src="./scripts.js"></script>
+
+</body>
+</html>

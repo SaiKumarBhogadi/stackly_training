@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stackly</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
   <script src="https://kit.fontawesome.com/e03681e89c.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
  
@@ -12,10 +13,10 @@
 <body>
   <!-- Top Bar -->
   <div class="top-bar">
-    <div class="logo">Stackly</div>
+    <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="" height="40px"></a></div>
     <div class="right">
      <a href="#courses"> <button class="courses">Courses</button> </a>
-      <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a>
+      <!-- <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a> -->
       <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
       <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a>
     </div>
@@ -23,13 +24,12 @@
 
   <!-- Nav Bar -->
   <div class="nav-bar">
-    <a href="#advantage">The Stackly advantage</a>
-    <a href="#skills">Skills you will gain</a>
-    <a href="#learn">What you'll learn</a>
-    <a href="#">Placement</a>
-    <a href="#eligible">Am I eligible for placements?</a>
-    <a href="#apply">How should I apply?</a>
-    <a href="#options">What are my finance options?</a>
+    <a href="./front-end.html">Front-End Development</a>
+    <a href="./fullstack.html">Full Stack Development</a>
+    <a href="./testing.html">Software Testing</a>
+    <a href="./python.html">Python Developer</a>
+    <a href="./java.html">Java Developer</a>
+    <a href="./marketing.html">Digital Marketing</a>
   </div>
   
 
@@ -74,12 +74,6 @@
 
 <section class="course-section" id="courses">
     <h1>Explore Our Courses</h1>
-    <div class="course-header">
-        <div class="tabs">
-            <button class="active" onclick="showCategory('technology')">Technology</button>
-            <button onclick="showCategory('digital-marketing')">Digital Marketing</button>
-        </div>
-    </div>
     <div class="course-grid">
         <!-- Technology Courses -->
         <div class="course-card technology show" data-course="front-end">
@@ -91,7 +85,7 @@
                 <span>📅 Upcoming Batch: May 2, 2025</span>
             </div>
             <div class="buttons">
-                <button class="view-btn" onclick="showCourseDetails('front-end')">View</button>
+             <a href="./front-end.html">   <button class="view-btn" >View</button></a>
                 <a href="#apply"><button class="apply-btn" >Apply</button></a>
             </div>
         </div>
@@ -104,7 +98,7 @@
                 <span>📅 Upcoming Batch: May 2, 2025</span>
             </div>
             <div class="buttons">
-                <button class="view-btn" onclick="showCourseDetails('full-stack')">View</button>
+                <a href="./fullstack.html">   <button class="view-btn" >View</button></a>
                 <a href="#apply"><button class="apply-btn" >Apply</button></a>
             </div>
         </div>
@@ -117,7 +111,7 @@
                 <span>📅 Upcoming Batch: May 2, 2025</span>
             </div>
             <div class="buttons">
-                <button class="view-btn" onclick="showCourseDetails('software-testing')">View</button>
+                <a href="./testing.html">   <button class="view-btn" >View</button></a>
                 <a href="#apply"><button class="apply-btn" >Apply</button></a>
             </div>
         </div>
@@ -130,7 +124,7 @@
                 <span>📅 Upcoming Batch: May 2, 2025</span>
             </div>
             <div class="buttons">
-                <button class="view-btn" onclick="showCourseDetails('java-developer')">View</button>
+                <a href="./java.html">   <button class="view-btn" >View</button></a>
                 <a href="#apply"><button class="apply-btn" >Apply</button></a>
             </div>
         </div>
@@ -143,12 +137,12 @@
                 <span>📅 Upcoming Batch: May 2, 2025</span>
             </div>
             <div class="buttons">
-                <button class="view-btn" onclick="showCourseDetails('python-developer')">View</button>
+                <a href="./python.html">   <button class="view-btn" >View</button></a>
                 <a href="#apply"><button class="apply-btn" >Apply</button></a>
             </div>
         </div>
         <!-- Digital Marketing Course -->
-        <div class="course-card digital-marketing" data-course="digital-marketing">
+        <div class="course-card digital-marketing show" data-course="digital-marketing">
             <i class="fas fa-bullhorn"></i>
             <h3>Digital Marketing</h3>
             <div class="details">
@@ -157,306 +151,31 @@
                 <span>📅 Upcoming Batch: May 2, 2025</span>
             </div>
             <div class="buttons">
-                <button class="view-btn" onclick="showCourseDetails('digital-marketing')">View</button>
+                <a href="./marketing.html">   <button class="view-btn" >View</button></a>
                 <a href="#apply"><button class="apply-btn" >Apply</button></a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Hero Section for Course Details -->
-<section class="hero" id="course-details">
-    <div class="hero-content">
-        <h1 id="course-title">Front End Development</h1>
-        <p id="course-description">Master advanced skills with a 6-week online program.</p>
-        <div class="details">
-            <p><strong>Fees:</strong> <span id="course-fees">₹30,000 + 18% GST</span></p>
-            <p><strong>Placement Opportunities</strong></p>
-        </div>
-        <div class="calendar-section">
-            <div class="calendar-date">
-                <div class="day" id="course-day">2</div>
-                <div class="month" id="course-month">May</div>
-            </div>
-            <div class="calendar-info">
-                <p><strong>Upcoming Batch:</strong></p>
-                <p class="schedule" id="course-schedule">Mon, Tue, Thu, Fri, 07:30 PM to 09:30 PM</p>
-            </div>
-        </div>
-        <button class="cta-button">Enroll Now</button>
-    </div>
-    <img src="./images/course.jpg" alt="Hero Image" class="hero-image">
-    <div class="decorative-circles circle-1"></div>
-    <div class="decorative-circles circle-2"></div>
-</section>
 
 
-<section class="advantage-section" id="advantage">
-    <h2>The Stackly Advantage</h2>
-    <p class="subtitle">Turning ambitions into achievements</p>
-    <div class="content-wrapper">
-        <div class="certificate">
-            <img src="./images/certificate.avif" alt="Stackly Certificate">
-        </div>
-        <div class="benefits">
-            <div class="benefit-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-                <p>Expert-led learning – gain insights from industry leaders and innovators.</p>
-            </div>
-            <div class="benefit-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 10.5h-2V15h2v-1.5zm0-2.5h-2v-2h2v2z"/></svg>
-                <p>Projects through individual or group presentations to build real-world skills.</p>
-            </div>
-            <div class="benefit-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
-                <p>Global competence – Stackly certifications ensure job readiness from day one.</p>
-            </div>
-            <div class="benefit-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                <p>Industry-aligned training – learn through real-world applications.</p>
-            </div>
-            <div class="benefit-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3zm0-4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm6 10H6v-1.53c0-2.5 3.97-3.58 6-3.58s6 1.08 6 3.58V18zm-6-3c-1.31 0-3 .84-3 1.47V17h6v-.53c0-.63-1.69-1.47-3-1.47z"/></svg>
-                <p>Built-in placement assistance to kickstart your career.</p>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <strong>100%</strong>
-                    <span>Eligible learners placed*</span>
-                </div>
-                <div class="stat">
-                    <strong>₹6 LPA</strong>
-                    <span>Kickstart your career with salaries up to*</span>
-                </div>
-            </div>
-        </div>
+
+<section class="video-section">
+    <h2 class="video-heading">Stackly Advantage</h2>
+    <div class="video-container">
+        <video id="stackly-video" controls muted>
+            <source src="./videos/stackly-advantage.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="mute-btn" class="mute-btn">Unmute</button>
     </div>
 </section>
 
 
 
-<section class="skills-section" id="skills">
-    <h2>Skills You Gain</h2>
-    <div class="skills-grid">
-        <div class="skill-item">
-            <i class="fas fa-code"></i>
-            <h3>Front End Development</h3>
-            <p>Build responsive web applications.</p>
-        </div>
-        <div class="skill-item">
-            <i class="fas fa-layer-group"></i>
-            <h3>Full Stack Development</h3>
-            <p>Create full-scale websites and apps.</p>
-        </div>
-        <div class="skill-item">
-            <i class="fas fa-bug"></i>
-            <h3>Software Testing</h3>
-            <p>Identify bugs through manual and automated testing.</p>
-        </div>
-        <div class="skill-item">
-            <i class="fab fa-java"></i>
-            <h3>Java Developer</h3>
-            <p>Build applications with core Java skills.</p>
-        </div>
-        <div class="skill-item">
-            <i class="fab fa-python"></i>
-            <h3>Python Developer</h3>
-            <p>Write efficient code for scalable applications.</p>
-        </div>
-        <div class="skill-item">
-            <i class="fas fa-bullhorn"></i>
-            <h3>Digital Marketing</h3>
-            <p>Improve website ranking with SEO optimization.</p>
-        </div>
-    </div>
-</section>
 
 
-
-<div class="learn-section" id="learn">
-    <h2>What You'll Learn</h2>
-    <div class="learn-grid">
-        <div class="learn-item">
-            <i class="fas fa-laptop-code" style="color: #FBBF24;"></i>
-            <h3>Programming Foundation</h3>
-            <p>using Java<br>Java language fundamentals and core programming concepts</p>
-        </div>
-        <div class="learn-item">
-            <i class="fas fa-object-group" style="color: #FBBF24;"></i>
-            <h3>Object-oriented Programming</h3>
-            <p>Develop responsive web pages using HTML5 and CSS3</p>
-        </div>
-        <div class="learn-item">
-            <i class="fas fa-code-branch" style="color: #FBBF24;"></i>
-            <h3>Developing Basic Programs</h3>
-            <p>using JavaScript<br>Building interactive web pages using modern JavaScript</p>
-        </div>
-        <div class="learn-item">
-            <i class="fab fa-react" style="color: #FBBF24;"></i>
-            <h3>Building Single Page Applications</h3>
-            <p>using React<br>Building SPA with complex forms and navigable workflows using React</p>
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="eligibility-section" id="eligible">
-    <h2>Am I Eligible to Apply?</h2>
-    <div class="eligibility-flow">
-        <div class="eligibility-item">
-            <i class="fas fa-unlock-alt" style="color: #FBBF24;"></i>
-            <h3>Unlock Your Future</h3>
-            <p><strong>Exciting opportunities!</strong><br>If you have completed class X, XII, and graduation, you're eligible.</p>
-        </div>
-        <div class="eligibility-item">
-            <i class="fas fa-graduation-cap" style="color: #FBBF24;"></i>
-            <h3>Who Can Join</h3>
-            <p>Open to BE/B.Tech, BCA, B.Sc, MCA, M.Sc, and B.Com graduates in relevant fields.</p>
-        </div>
-        <div class="eligibility-item">
-            <i class="fas fa-question-circle" style="color: #FBBF24;"></i>
-            <h3>Get More Info</h3>
-            <p>Explore placement assistance—check our FAQs for details!</p>
-        </div>
-    </div>
-    <div class="enroll-flow">
-        <h2>Enroll in Just a Few Easy Steps!</h2>
-        <div class="step-path">
-            <div class="step-node">
-                <div class="step-circle">1</div>
-                <p>Fill Application</p>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-node">
-                <div class="step-circle">2</div>
-                <p>Get Screened</p>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-node">
-                <div class="step-circle">3</div>
-                <p>Pay Fees</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div id="apply">
-<form class="stackly-form-section" >
-    <h2 class="stackly-form-heading">1. Application</h2>
-  
-    <div class="stackly-form-grid">
-      <div class="stackly-form-group">
-        <input type="text" placeholder="*Full name (Please enter name as per aadhaar)" class="stackly-input" required>
-      </div>
-  
-      <div class="stackly-form-group">
-        <input type="email" placeholder="*Email ID e.g. rakesh.sharma@gmail.com" class="stackly-input" required>
-      </div>
-  
-      <div class="stackly-form-group">
-        <input type="text" placeholder="Enter city name" class="stackly-input">
-      </div>
-  
-      <div class="stackly-form-group">
-        <div class="stackly-phone-wrapper">
-          <span class="stackly-phone-code">+91</span>
-          <input type="tel" placeholder="Enter phone number" class="stackly-phone-input" required>
-          <button type="button" class="stackly-get-otp-btn">Get OTP</button>
-        </div>
-      </div>
-    </div>
-  
-    <div class="stackly-checkbox-row">
-      <label class="stackly-checkbox-label">
-        <input type="checkbox" checked>
-        I agree to receive updates on 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="16" />
-        WhatsApp
-      </label>
-      <label class="stackly-checkbox-label">
-        <input type="checkbox">
-        I agree to <a href="#" style="color:#0071bc">Privacy Policy</a> & overriding DNC/NDNC for Call/SMS.
-      </label>
-    </div>
-  
-    <button type="submit" class="stackly-submit-btn">Submit and proceed</button>
-  </form>
-</div>
-  
-
-  <section class="finance-wrapper" id="options">
-    <div class="finance-container">
-      <div class="finance-left">
-        <h2 class="finance-heading">What are my finance options?</h2>
-        <p class="finance-subtext">
-          We have multiple payment options to suit your needs. Full upfront payment gets you a special
-          <span class="highlight">5% concession (₹4,950)</span>.
-        </p>
-        <ul class="finance-fees">
-          <li><strong>Program fees:</strong> ₹70,000 + 18% GST</li>
-          <li><strong>Booking fees:</strong> ₹1,500 + 18% GST</li>
-        </ul>
-      </div>
-      <div class="finance-right">
-        <div class="finance-box">
-          <div>
-            <h4 class="finance-box-title">Payment Options</h4>
-            <p class="finance-box-sub">Pay full upfront:</p>
-          </div>
-          <div>
-            <h4 class="finance-box-title">Down payment</h4>
-            <p class="finance-price">
-              ₹66,500 <span class="finance-discount">(Inclusive of 5% fee concession)</span>
-            </p>
-          </div>
-        </div>
-        <p class="finance-note">* All fees shown are exclusive of 18% GST</p>
-        <div class="finance-buttons">
-          <button class="btn-primary">Payment options</button>
-          <button class="btn-secondary">View offers</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-
-  
-<div class="faq">
-  <div class="faq-container">
-    <div class="faq-header">Frequently asked questions</div>
-    <div class="faq-item">
-        <h3 class="faq-question">Who should join this course? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">This course is ideal for beginners and professionals looking to enhance their front-end development skills with React and advanced programming techniques.</p>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">What makes Front-end Dev with React & GenAI Advanced Program Unique? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">It offers a blend of React expertise and Generative AI, providing a cutting-edge curriculum tailored for future tech demands.</p>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">Which topics are covered as part of the curriculum? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">Topics include React basics, state management, GenAI integration, and advanced JavaScript concepts.</p>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">What will be my exit profile after the successful completion of the program? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">You will emerge as a skilled front-end developer with expertise in React and GenAI, ready for industry roles.</p>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">What are some important points to note before availing of a loan through the finance provider (NBFC)? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">Ensure you review interest rates, repayment terms, and eligibility criteria before applying.</p>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">What documents need to be uploaded on the lender's website at the time of loan application? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">Required documents include ID proof, address proof, income proof, and bank statements.</p>
-    </div>
-    <div class="faq-item">
-        <h3 class="faq-question">What are the T&C for this program? <span class="faq-toggle">+</span></h3>
-        <p class="faq-answer">Terms include course duration, payment policies, and refund conditions as outlined by the provider.</p>
-    </div>
-</div>
-</div>
   
 
 

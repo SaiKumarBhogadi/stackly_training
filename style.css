@@ -24,17 +24,20 @@
     top: 0;
     z-index: 1001; /* Higher z-index to stay above nav-bar */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
-  }
-  .top-bar .logo {
+}
+
+.top-bar .logo {
     font-size: 24px;
     font-weight: bold;
     margin-left: 5px;
-  }
-  .top-bar .right {
+}
+
+.top-bar .right {
     display: flex;
     align-items: center;
-  }
-  .top-bar .courses {
+}
+
+.top-bar .courses {
     background-color: #3498db; /* Light blue from Stackly */
     color: #ffffff;
     padding: 8px 15px;
@@ -43,35 +46,41 @@
     font-size: 14px;
     margin-right: 15px;
     border-radius: 5px;
-  }
-  .top-bar .courses:hover {
+}
+
+.top-bar .courses:hover {
     background-color: #1abc9c; /* Green from Stackly for hover */
-  }
-  .top-bar .icons a {
+}
+
+.top-bar .icons a {
     color: #2c3e50; /* Dark blue icons */
     font-size: 25px; /* Clear, bold icons */
     text-decoration: none;
     margin-left: 20px;
-  }
-  .top-bar .icons a i {
-    vertical-align: middle;
-  }
+}
 
-  /* Nav Bar */
-  .nav-bar {
+.top-bar .icons a i {
+    vertical-align: middle;
+}
+
+/* Nav Bar */
+.nav-bar {
     background-color: #ffffff; /* White background */
     padding: 5px 10%; /* 10% padding for big screens */
     position: sticky; /* Make nav bar sticky */
     padding-top: 20px;
     padding-bottom: 20px;
-    top: 60px; /* Adjusted for top-bar height */
+    top: 70px; /* Adjusted for top-bar height */
     z-index: 1000; /* Slightly lower than top-bar */
     overflow-x: auto; /* Horizontal scrolling */
     white-space: nowrap; /* Keep items in one line */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
     border-bottom: 1px solid #e0e0e0; /* Light border for separation */
-  }
-  .nav-bar a {
+    display: flex; /* Use flexbox to center items */
+    justify-content: center; /* Center the links horizontally */
+}
+
+.nav-bar a {
     color: #2c3e50;
     text-decoration: none;
     margin: 0 15px;
@@ -79,57 +88,60 @@
     display: inline-block;
     vertical-align: middle;
     font-weight: 500;
-  }
-  .nav-bar a:hover {
+}
+
+.nav-bar a:hover {
     color: #1abc9c; /* Green from Stackly for hover */
-  }
-  .nav-bar::-webkit-scrollbar {
+}
+
+.nav-bar::-webkit-scrollbar {
     height: 6px; /* Thinner scrollbar */
-  }
-  .nav-bar::-webkit-scrollbar-thumb {
+}
+
+.nav-bar::-webkit-scrollbar-thumb {
     background-color: #3498db;
     border-radius: 3px;
-  }
-  .nav-bar::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
+}
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
+.nav-bar::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .top-bar {
-      padding: 8px 0; /* No padding on smaller screens */
+        padding: 8px 0; /* No padding on smaller screens */
     }
     .top-bar .logo {
-      font-size: 20px;
+        font-size: 20px;
     }
     .top-bar .courses {
-      padding: 6px 12px;
-      font-size: 12px;
-      margin-right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+        margin-right: 10px;
     }
     .top-bar .icons a {
-      font-size: 20px;
-      margin-left: 10px;
+        font-size: 20px;
+        margin-left: 10px;
     }
     .nav-bar {
-      padding: 5px 0;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      top: 38px;
-       /* No padding on smaller screens */
+        padding: 5px 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        top: 58px;
+        justify-content: start; /* On smaller screens, start from the left to allow scrolling */
     }
     .nav-bar a {
-      margin: 0 10px;
-      font-size: 14px;
+        margin: 0 10px;
+        font-size: 14px;
     }
     #top3 {
-      margin-right: 5px;
+        margin-right: 5px;
     }
     .logo {
-      margin-left: 5px;
+        margin-left: 5px;
     }
-  }
-
+}
 
 
 
@@ -353,16 +365,14 @@
         background: linear-gradient(135deg, #1E3A8A 0%, #2DD4BF 100%);
         color: white;
         padding: 4rem 10%;
-        display: none; /* Initially hidden */
+        display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         position: relative;
         min-height: 400px;
     }
-    .hero.active {
-        display: flex; /* Show when active */
-    }
+   
     .hero-content {
         max-width: 50%;
         width: 100%;
@@ -760,10 +770,8 @@
 
 
 
-
-
 .skills-section {
-    background: linear-gradient(135deg, #1E3A8A 0%, #2DD4BF 100%);
+    background: linear-gradient(135deg, #2DD4BF 0%, #1E3A8A 100%);
     padding: 4rem 10%;
     text-align: center;
     color: white;
@@ -772,7 +780,7 @@
 
 .skills-section h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -781,8 +789,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px; /* Increased for ultra-wide screens */
     margin: 0 auto;
+    justify-items: center; /* Center items horizontally */
 }
 
 .skill-item {
@@ -790,6 +799,12 @@
     padding: 1.5rem;
     border-radius: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure consistent width */
+    max-width: 300px; /* Prevent cards from stretching too wide */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .skill-item:hover {
@@ -806,23 +821,49 @@
 .skill-item h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: white;
 }
 
 .skill-item p {
     font-size: 0.9rem;
     opacity: 0.9;
+    color: white;
 }
 
-/* Responsive Design */
+/* Responsive Design for Larger Screens */
+@media (min-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly wider cards on large screens */
+    }
+}
+
+/* Medium Screens (e.g., Tablets) */
+@media (max-width: 1024px) {
+    .skills-section {
+        padding: 3rem 8%;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Slightly smaller cards */
+    }
+    .skill-item {
+        max-width: 280px;
+    }
+}
+
 @media (max-width: 768px) {
     .skills-section {
-        padding: 2rem 10%;
+        padding: 2rem 5%; /* Reduced padding for smaller screens */
     }
     .skills-section h2 {
         font-size: 2rem;
     }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller cards for better fit */
+        gap: 1.5rem;
+    }
     .skill-item {
         padding: 1rem;
+        max-width: 250px;
     }
     .skill-item i {
         font-size: 1.5rem;
@@ -830,27 +871,59 @@
     .skill-item h3 {
         font-size: 1.1rem;
     }
+    .skill-item p {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .skills-section {
+        padding: 1.5rem 4%;
+    }
     .skills-section h2 {
         font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Full width on very small screens */
+        gap: 1rem;
     }
     .skill-item {
         padding: 0.8rem;
+        max-width: 100%; /* Full width for better readability */
     }
     .skill-item i {
         font-size: 1.2rem;
     }
     .skill-item h3 {
-        font-size :1rem;
+        font-size: 1rem;
     }
     .skill-item p {
         font-size: 0.8rem;
     }
 }
 
-
+@media (max-width: 320px) {
+    .skills-section {
+        padding: 1rem 3%;
+    }
+    .skills-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .skill-item {
+        padding: 0.6rem;
+    }
+    .skill-item i {
+        font-size: 1rem;
+    }
+    .skill-item h3 {
+        font-size: 0.9rem;
+    }
+    .skill-item p {
+        font-size: 0.75rem;
+    }
+}
 
 
 .learn-section {
@@ -872,6 +945,7 @@
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
+    justify-items: center; /* Center items horizontally */
 }
 
 .learn-item {
@@ -881,6 +955,12 @@
     border: 2px solid #93C5FD;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure consistent width */
+    max-width: 250px; /* Match the image card width */
 }
 
 .learn-item:hover {
@@ -904,15 +984,46 @@
     line-height: 1.4;
 }
 
+/* Custom adjustment for centering remaining items */
+@media (min-width: 768px) {
+    .learn-grid {
+        grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Force 3 columns on larger screens */
+    }
+    .learn-grid {
+        justify-content: center; /* Center the grid container */
+    }
+    .learn-grid:where(:not(:has(:nth-child(3n + 1)))) .learn-item {
+        margin: 0 auto; /* Center individual items if less than full row */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .learn-section {
+        padding: 3rem 8%;
+    }
+    .learn-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Slightly smaller cards */
+    }
+    .learn-item {
+        max-width: 220px;
+    }
+}
+
 @media (max-width: 768px) {
     .learn-section {
-        padding: 2rem 10%;
+        padding: 2rem 5%;
     }
     .learn-section h2 {
         font-size: 2rem;
     }
+    .learn-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+    }
     .learn-item {
         padding: 1rem;
+        max-width: 200px;
     }
     .learn-item i {
         font-size: 1.5rem;
@@ -920,20 +1031,51 @@
 }
 
 @media (max-width: 480px) {
+    .learn-section {
+        padding: 1.5rem 4%;
+    }
     .learn-section h2 {
         font-size: 1.5rem;
     }
+    .learn-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 1rem;
+    }
+    .learn-item {
+        padding: 0.8rem;
+        max-width: 100%; /* Full width for better readability */
+    }
     .learn-item i {
-        font-size :1.2rem;
+        font-size: 1.2rem;
     }
     .learn-item h3 {
-        font-size :1rem;
+        font-size: 1rem;
     }
     .learn-item p {
-        font-size :0.8rem;
+        font-size: 0.8rem;
     }
 }
 
+@media (max-width: 320px) {
+    .learn-section {
+        padding: 1rem 3%;
+    }
+    .learn-section h2 {
+        font-size: 1.3rem;
+    }
+    .learn-item {
+        padding: 0.6rem;
+    }
+    .learn-item i {
+        font-size: 1rem;
+    }
+    .learn-item h3 {
+        font-size: 0.9rem;
+    }
+    .learn-item p {
+        font-size: 0.75rem;
+    }
+}
 
 
 
@@ -1769,5 +1911,82 @@
     .footer-logo, .footer-nav, .footer-contact {
         flex: none;
         margin: 20px 0;
+    }
+}
+
+
+
+
+.video-section {
+    background: #F3F4F6;
+    padding: 4rem 10%;
+    text-align: center;
+    position: relative;
+}
+
+.video-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1E3A8A;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#stackly-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mute-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.mute-btn:hover {
+    background-color: #1abc9c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-section {
+        padding: 2rem 5%;
+    }
+    .video-heading {
+        font-size: 2rem;
+    }
+    .mute-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-section {
+        padding: 1.5rem 4%;
+    }
+    .video-heading {
+        font-size: 1.5rem;
+    }
+    .mute-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 }

@@ -219,3 +219,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('stackly-video');
+    const muteBtn = document.getElementById('mute-btn');
+
+    muteBtn.addEventListener('click', function() {
+        if (video.muted) {
+            video.muted = false;
+            muteBtn.textContent = 'Mute';
+        } else {
+            video.muted = true;
+            muteBtn.textContent = 'Unmute';
+        }
+    });
+});
