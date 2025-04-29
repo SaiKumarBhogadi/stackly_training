@@ -17,8 +17,8 @@
     <div class="right">
      <a href="#courses"> <button class="courses">Courses</button> </a>
       <!-- <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a> -->
-      <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
-      <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a>
+      <!-- <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
+      <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a> -->
     </div>
   </div>
 
@@ -45,15 +45,15 @@
         </div>
         <div class="calendar-section">
             <div class="calendar-date">
-                <div class="day" id="course-day">2</div>
+                <div class="day" id="course-day">12</div>
                 <div class="month" id="course-month">May</div>
             </div>
             <div class="calendar-info">
-                <p><strong>Upcoming Batch: May 2 2025</strong></p>
-                <p class="schedule" id="course-schedule">Mon, Tue, Thu, Fri, 07:30 PM to 09:30 PM</p>
+                <p><strong>Upcoming Batch: May 12, 2025</strong></p>
+                <p class="schedule" id="course-schedule" style="margin-top: 5px;">Mon- Fri, 09:30 AM to 06:30 PM</p>
             </div>
         </div>
-        <button class="cta-button">Enroll Now</button>
+       <a href="#apply"> <button class="cta-button">Enroll Now</button></a>
     </div>
     <img src="./images/full-stack.jpg" alt="Hero Image" class="hero-image">
     <div class="decorative-circles circle-1"></div>
@@ -95,7 +95,7 @@
                     <span>Eligible learners placed*</span>
                 </div>
                 <div class="stat">
-                    <strong>₹6 LPA</strong>
+                    <strong>₹4 LPA</strong>
                     <span>Kickstart your career with salaries up to*</span>
                 </div>
             </div>
@@ -266,47 +266,65 @@
 
 
 <div id="apply">
-<form class="stackly-form-section" >
-    <h2 class="stackly-form-heading">1. Application</h2>
+    <form class="stackly-form-section" method="POST" enctype="multipart/form-data" id="application-form">
+      <!-- CSRF token goes here in Django template -->
   
-    <div class="stackly-form-grid">
-      <div class="stackly-form-group">
-        <input type="text" placeholder="*Full name (Please enter name as per aadhaar)" class="stackly-input" required>
-      </div>
+      <h2 class="stackly-form-heading">1. Application</h2>
   
-      <div class="stackly-form-group">
-        <input type="email" placeholder="*Email ID e.g. rakesh.sharma@gmail.com" class="stackly-input" required>
-      </div>
+      <div class="stackly-form-grid">
   
-      <div class="stackly-form-group">
-        <input type="text" placeholder="Enter city name" class="stackly-input">
-      </div>
-  
-      <div class="stackly-form-group">
-        <div class="stackly-phone-wrapper">
-          <span class="stackly-phone-code">+91</span>
-          <input type="tel" placeholder="Enter phone number" class="stackly-phone-input" required>
-          <button type="button" class="stackly-get-otp-btn">Get OTP</button>
+        <div class="stackly-form-group">
+          <input type="text" name="full_name" class="stackly-input" placeholder="*Full name (Please enter name as per aadhaar)" required />
         </div>
+  
+        <div class="stackly-form-group">
+          <input type="email" name="email" class="stackly-input" placeholder="*Email ID e.g. rakesh.sharma@gmail.com" required />
+        </div>
+  
+        <div class="stackly-form-group">
+          <input type="text" name="city" class="stackly-input" placeholder="Enter city name" />
+        </div>
+  
+        <div class="stackly-form-group">
+          <div class="stackly-phone-wrapper">
+            <span class="stackly-phone-code">+91</span>
+            <input type="tel" name="phone" class="stackly-phone-input" placeholder="Enter phone number" required />
+            <!-- <button type="button" class="stackly-get-otp-btn">Get OTP</button> -->
+          </div>
+        </div>
+  
+        <div class="stackly-form-group">
+          <label style="font-size: 14px; color: #444;">Upload Resume</label>
+          <input type="file" name="resume" class="stackly-input" required />
+        </div>
+  
+      </div>
+  
+      <div class="stackly-checkbox-row">
+        <label class="stackly-checkbox-label">
+          <input type="checkbox" name="whatsapp_updates" checked required />
+          I agree to receive updates on
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="16" />
+          WhatsApp
+        </label>
+        <label class="stackly-checkbox-label">
+          <input type="checkbox" name="privacy_policy_agreed" required />
+          I agree to <a href="#" style="color:#0071bc">Privacy Policy</a> & overriding DNC/NDNC for Call/SMS.
+        </label>
+      </div>
+  
+      <button type="submit" class="stackly-submit-btn">Submit and proceed</button>
+    </form>
+  
+    <!-- Popup for form submission -->
+    <div id="success-popup" class="stackly-popup" style="display: none;">
+      <div class="stackly-popup-content">
+        <h3>Thank You!</h3>
+        <p>Your form is submitted. We will reach out shortly.</p>
+        <button id="close-popup" class="stackly-popup-close">OK</button>
       </div>
     </div>
-  
-    <div class="stackly-checkbox-row">
-      <label class="stackly-checkbox-label">
-        <input type="checkbox" checked>
-        I agree to receive updates on 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="16" />
-        WhatsApp
-      </label>
-      <label class="stackly-checkbox-label">
-        <input type="checkbox">
-        I agree to <a href="#" style="color:#0071bc">Privacy Policy</a> & overriding DNC/NDNC for Call/SMS.
-      </label>
-    </div>
-  
-    <button type="submit" class="stackly-submit-btn">Submit and proceed</button>
-  </form>
-</div>
+  </div>
   
 
 
@@ -327,7 +345,7 @@
     <footer class="custom-footer">
         <div class="footer-top">
             <div class="footer-logo">
-                <img src="https://via.placeholder.com/100x60" alt="Custom Logo">
+                <img src="./images/white-logo.png" alt="Custom Logo">
                 <p>Empowering learning and innovation since 2025.</p>
             </div>
             <div class="footer-nav">
@@ -342,9 +360,9 @@
             <div class="footer-contact">
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><a href="mailto:support@example.com">support@example.com</a></li>
-                    <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-                    <li><a href="#">123 Learning St, Tech City</a></li>
+                    <li><a href="mailto:manu@thestackly.com">manu@thestackly.com</a></li>
+                    <li><a href="tel:+1234567890">+91 7010792745</a></li>
+                    <li><a href="#">MMR Complex, Salem , 636008</a></li>
                 </ul>
             </div>
         </div>
