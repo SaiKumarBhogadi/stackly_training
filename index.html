@@ -1,275 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackly</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" type="image/png" href="./images/favicon.png">
-  <script src="https://kit.fontawesome.com/e03681e89c.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
-</head>
-<body>
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="" height="40px"></a></div>
-    <div class="right">
-     <a href="#courses"> <button class="courses">Courses</button> </a>
-      <!-- <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a> -->
-      <!-- <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
-      <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a> -->
-    </div>
-  </div>
 
-  <!-- Nav Bar -->
-  <div class="nav-bar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <script src="https://kit.fontawesome.com/e03681e89c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="" height="40px"></a></div>
+        <div class="right">
+            <a href="#courses"> <button class="courses">Courses</button> </a>
+            <!-- <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a> -->
+            <!-- <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
+      <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a> -->
+        </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
     <a href="./front-end.html">Front-End Development</a>
     <a href="./fullstack.html">Full Stack Development</a>
     <a href="./testing.html">Software Testing</a>
     <a href="./python.html">Python Developer</a>
     <a href="./java.html">Java Developer</a>
     <a href="./marketing.html">Digital Marketing</a>
+    <a href="./azure.html">Azure</a>
+    <a href="./devops.html">DevOps</a>
+    <a href="./data-analyst.html">Data Analyst</a>
+    <a href="./data-scientist.html">Data Scientist</a>
+    <a href="./ai-ml.html">AI / ML</a>
   </div>
-  
 
 
-  <div class="slider-container">
-    <div class="slides">
-        <div class="slide">
-            <img src="./images/slider2.jpg" alt="Slide 1">
-            <div class="overlay">
-                <h2>Web Development Mastery</h2>
-                <p>Learn HTML, CSS, JavaScript, and more to build stunning websites from scratch.</p>
-                <a href="./front-end.html"><button >Enroll Now</button></a>
+
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide">
+                <img src="./images/slider2.jpg" alt="Slide 1">
+                <div class="overlay">
+                    <h2>Web Development Mastery</h2>
+                    <p>Learn HTML, CSS, JavaScript, and more to build stunning websites from scratch.</p>
+                    <a href="./front-end.html"><button>Enroll Now</button></a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./images/slider3.jpg" alt="Slide 2">
+                <div class="overlay">
+                    <h2>Full Stack Development</h2>
+                    <p>Learn to build powerful web applications from start to finish.</p>
+                    <a href="./fullstack.html"> <button>Enroll Now</button></a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="./images/slider4.jpg" alt="Slide 3">
+                <div class="overlay">
+                    <h2>Digital Marketing Pro</h2>
+                    <p>Master SEO, social media, and analytics to grow your online presence.</p>
+                    <a href="./marketing.html"> <button>Enroll Now</button></a>
+                </div>
             </div>
         </div>
-        <div class="slide">
-            <img src="./images/slider3.jpg" alt="Slide 2">
-            <div class="overlay">
-                <h2>Full Stack Development</h2>
-                <p>Learn to build powerful web applications from start to finish.</p>
-               <a href="./fullstack.html"> <button >Enroll Now</button></a>
-            </div>
-        </div>
-        <div class="slide">
-            <img src="./images/slider4.jpg" alt="Slide 3">
-            <div class="overlay">
-                <h2>Digital Marketing Pro</h2>
-                <p>Master SEO, social media, and analytics to grow your online presence.</p>
-               <a href="./marketing.html"> <button >Enroll Now</button></a>
-            </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
         </div>
     </div>
-    <div class="dots">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+
+
+
+
+    <section class="course-section" id="courses">
+        <h1>Explore Our Courses</h1>
+        <div class="course-grid">
+            <!-- Technology Courses -->
+            <div class="course-card technology show" data-course="front-end">
+                <i class="fas fa-code"></i>
+                <h3>Front End Development</h3>
+                <div class="details">
+                    <span>💰 Rs.30,000 + 18% GST</span>
+                    <span>⏳ 6 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./front-end.html"> <button class="view-btn">View</button></a>
+                    <a href="./front-end.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+            <div class="course-card technology show" data-course="full-stack">
+                <i class="fas fa-layer-group"></i>
+                <h3>Full Stack Development</h3>
+                <div class="details">
+                    <span>💰 Rs.45,000 + 18% GST</span>
+                    <span>⏳ 12 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./fullstack.html"> <button class="view-btn">View</button></a>
+                    <a href="./fullstack.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+            <div class="course-card technology show" data-course="software-testing">
+                <i class="fas fa-bug"></i>
+                <h3>Software Testing</h3>
+                <div class="details">
+                    <span>💰 Rs.25,000 + 18% GST</span>
+                    <span>⏳ 4 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./testing.html"> <button class="view-btn">View</button></a>
+                    <a href="./testing.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+            <div class="course-card technology show" data-course="java-developer">
+                <i class="fab fa-java"></i>
+                <h3>Java Developer</h3>
+                <div class="details">
+                    <span>💰 Rs.40,000 + 18% GST</span>
+                    <span>⏳ 8 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./java.html"> <button class="view-btn">View</button></a>
+                    <a href="./java.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+            <div class="course-card technology show" data-course="python-developer">
+                <i class="fab fa-python"></i>
+                <h3>Python Developer</h3>
+                <div class="details">
+                    <span>💰 Rs.35,000 + 18% GST</span>
+                    <span>⏳ 8 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./python.html"> <button class="view-btn">View</button></a>
+                    <a href="./python.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+            <!-- Digital Marketing Course -->
+            <div class="course-card digital-marketing show" data-course="digital-marketing">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Digital Marketing</h3>
+                <div class="details">
+                    <span>💰 Rs.55,000 + 18% GST</span>
+                    <span>⏳ 12 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./marketing.html"> <button class="view-btn">View</button></a>
+                    <a href="./marketing.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+
+            <div class="course-card technology show" data-course="azure">
+                <i class="fas fa-cloud"></i>
+                <h3>Azure</h3>
+                <div class="details">
+                    <span>💰 Rs.55,000 + 18% GST</span>
+                    <span>⏳ 8 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./azure.html"><button class="view-btn">View</button></a>
+                    <a href="./azure.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+
+            <div class="course-card technology show" data-course="devops">
+                <i class="fas fa-cogs"></i>
+                <h3>DevOps</h3>
+                <div class="details">
+                    <span>💰 Rs.55,000 + 18% GST</span>
+                    <span>⏳ 10 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./devops.html"><button class="view-btn">View</button></a>
+                    <a href="./devops.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+
+            <div class="course-card technology show" data-course="data-analyst">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Analyst</h3>
+                <div class="details">
+                    <span>💰 Rs.75,000 + 18% GST</span>
+                    <span>⏳ 12 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./data-analyst.html"><button class="view-btn">View</button></a>
+                    <a href="./data-analyst.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+
+            <div class="course-card technology show" data-course="data-scientist">
+                <i class="fas fa-brain"></i>
+                <h3>Data Scientist</h3>
+                <div class="details">
+                    <span>💰 Rs.75,000 + 18% GST</span>
+                    <span>⏳ 16 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./data-scientist.html"><button class="view-btn">View</button></a>
+                    <a href="./data-scientist.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+
+            <div class="course-card technology show" data-course="ai-ml">
+                <i class="fas fa-robot"></i>
+                <h3>AI / Machine Learning</h3>
+                <div class="details">
+                    <span>💰 Rs.75,000 + 18% GST</span>
+                    <span>⏳ 16 Weeks</span>
+                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
+                </div>
+                <div class="buttons">
+                    <a href="./ai-ml.html"><button class="view-btn">View</button></a>
+                    <a href="./ai-ml.html#apply"><button class="apply-btn">Apply</button></a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <section class="video-section">
+        <h2 class="video-heading">Stackly Advantage</h2>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video id="stackly-video" muted autoplay>
+                    <source src="./images/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="mute-btn" class="mute-btn">Unmute</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="is-testimonials-section">
+        <div class="is-testimonials-container">
+            <h2 class="is-testimonials-subtitle">Learner Success Stories</h2>
+            <h1 class="is-testimonials-title">Happy With Expertise</h1>
+            <div class="is-testimonials-slider">
+                <div class="is-testimonials-wrapper">
+
+                    <div class="is-testimonial-card">
+                        <blockquote>
+                            <p>“I joined the Full Stack Development course, and it completely transformed my career. The
+                                practical projects and mentoring helped me crack my first job in just 3 months.”</p>
+                            <cite>Ravi Teja (Hyderabad)</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="is-testimonial-card">
+                        <blockquote>
+                            <p>“The Digital Marketing program was exceptional! Real-time case studies and hands-on tools
+                                made it easy to understand and apply. I now run my own marketing agency.”</p>
+                            <cite>Meenakshi Suresh (Chennai)</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="is-testimonial-card">
+                        <blockquote>
+                            <p>“Frontend development always felt confusing until I joined this course. React, Bootstrap,
+                                and real-world UI projects boosted my confidence immensely.”</p>
+                            <cite>Akhil Raj (Bengaluru)</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="is-testimonial-card">
+                        <blockquote>
+                            <p>“I opted for the software testing track, and I must say the training was
+                                industry-relevant. Manual + automation with tools like Selenium gave me a solid edge.”
+                            </p>
+                            <cite>Divya Nair (Kochi)</cite>
+                        </blockquote>
+                    </div>
+
+                    <div class="is-testimonial-card">
+                        <blockquote>
+                            <p>“The mentors are very friendly and explain concepts clearly. I could build a full project
+                                from scratch in the Full Stack bootcamp, and that helped me during interviews.”</p>
+                            <cite>Karthik M (Coimbatore)</cite>
+                        </blockquote>
+                    </div>
+
+                </div>
+            </div>
+            <div class="is-testimonials-dots">
+                <!-- Dots will be dynamically generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <div class="footer-wrapper">
+        <footer class="custom-footer">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="./images/white-logo.png" alt="Custom Logo">
+                    <p>Empowering learning and innovation since 2025.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="mailto:manu@thestackly.com">manu@thestackly.com</a></li>
+                        <li><a href="tel:+1234567890">+91 7010792745</a></li>
+                        <li><a href="#">MMR Complex, Salem , 636008</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Stackly Learning Platform. All rights reserved. | <a href="#">Privacy Policy</a> | <a
+                        href="#">Terms of Service</a></p>
+            </div>
+        </footer>
     </div>
-</div>
 
 
-
-
-<section class="course-section" id="courses">
-    <h1>Explore Our Courses</h1>
-    <div class="course-grid">
-        <!-- Technology Courses -->
-        <div class="course-card technology show" data-course="front-end">
-            <i class="fas fa-code"></i>
-            <h3>Front End Development</h3>
-            <div class="details">
-                <span>💰 Rs.30,000 + 18% GST</span>
-                <span>⏳ 6 Weeks</span>
-                <span>📅 Upcoming Batch: May 12, 2025</span>
-            </div>
-            <div class="buttons">
-             <a href="./front-end.html">   <button class="view-btn" >View</button></a>
-                <a href="./front-end.html#apply"><button class="apply-btn" >Apply</button></a>
-            </div>
-        </div>
-        <div class="course-card technology show" data-course="full-stack">
-            <i class="fas fa-layer-group"></i>
-            <h3>Full Stack Development</h3>
-            <div class="details">
-                <span>💰 Rs.45,000 + 18% GST</span>
-                <span>⏳ 12 Weeks</span>
-                <span>📅 Upcoming Batch: May 12, 2025</span>
-            </div>
-            <div class="buttons">
-                <a href="./fullstack.html">   <button class="view-btn" >View</button></a>
-                <a href="./fullstack.html#apply"><button class="apply-btn" >Apply</button></a>
-            </div>
-        </div>
-        <div class="course-card technology show" data-course="software-testing">
-            <i class="fas fa-bug"></i>
-            <h3>Software Testing</h3>
-            <div class="details">
-                <span>💰 Rs.25,000 + 18% GST</span>
-                <span>⏳ 4 Weeks</span>
-                <span>📅 Upcoming Batch: May 12, 2025</span>
-            </div>
-            <div class="buttons">
-                <a href="./testing.html">   <button class="view-btn" >View</button></a>
-                <a href="./testing.html#apply"><button class="apply-btn" >Apply</button></a>
-            </div>
-        </div>
-        <div class="course-card technology show" data-course="java-developer">
-            <i class="fab fa-java"></i>
-            <h3>Java Developer</h3>
-            <div class="details">
-                <span>💰 Rs.40,000 + 18% GST</span>
-                <span>⏳ 8 Weeks</span>
-                <span>📅 Upcoming Batch: May 12, 2025</span>
-            </div>
-            <div class="buttons">
-                <a href="./java.html">   <button class="view-btn" >View</button></a>
-                <a href="./java.html#apply"><button class="apply-btn" >Apply</button></a>
-            </div>
-        </div>
-        <div class="course-card technology show" data-course="python-developer">
-            <i class="fab fa-python"></i>
-            <h3>Python Developer</h3>
-            <div class="details">
-                <span>💰 Rs.35,000 + 18% GST</span>
-                <span>⏳ 8 Weeks</span>
-                <span>📅 Upcoming Batch: May 12, 2025</span>
-            </div>
-            <div class="buttons">
-                <a href="./python.html">   <button class="view-btn" >View</button></a>
-                <a href="./python.html#apply"><button class="apply-btn" >Apply</button></a>
-            </div>
-        </div>
-        <!-- Digital Marketing Course -->
-        <div class="course-card digital-marketing show" data-course="digital-marketing">
-            <i class="fas fa-bullhorn"></i>
-            <h3>Digital Marketing</h3>
-            <div class="details">
-                <span>💰 Rs.55,000 + 18% GST</span>
-                <span>⏳ 12 Weeks</span>
-                <span>📅 Upcoming Batch: May 12, 2025</span>
-            </div>
-            <div class="buttons">
-                <a href="./marketing.html">   <button class="view-btn" >View</button></a>
-                <a href="./marketing.html#apply"><button class="apply-btn" >Apply</button></a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<section class="video-section">
-    <h2 class="video-heading">Stackly Advantage</h2>
-    <div class="video-container">
-        <div class="video-wrapper">
-            <video id="stackly-video" muted autoplay>
-                <source src="./images/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <button id="mute-btn" class="mute-btn">Unmute</button>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-  
-
-
-
-
-<section class="is-testimonials-section">
-    <div class="is-testimonials-container">
-        <h2 class="is-testimonials-subtitle">Learner Success Stories</h2>
-        <h1 class="is-testimonials-title">Happy With Expertise</h1>
-        <div class="is-testimonials-slider">
-            <div class="is-testimonials-wrapper">
-
-                <div class="is-testimonial-card">
-                    <blockquote>
-                        <p>“I joined the Full Stack Development course, and it completely transformed my career. The practical projects and mentoring helped me crack my first job in just 3 months.”</p>
-                        <cite>Ravi Teja (Hyderabad)</cite>
-                    </blockquote>
-                </div>
-
-                <div class="is-testimonial-card">
-                    <blockquote>
-                        <p>“The Digital Marketing program was exceptional! Real-time case studies and hands-on tools made it easy to understand and apply. I now run my own marketing agency.”</p>
-                        <cite>Meenakshi Suresh (Chennai)</cite>
-                    </blockquote>
-                </div>
-
-                <div class="is-testimonial-card">
-                    <blockquote>
-                        <p>“Frontend development always felt confusing until I joined this course. React, Bootstrap, and real-world UI projects boosted my confidence immensely.”</p>
-                        <cite>Akhil Raj (Bengaluru)</cite>
-                    </blockquote>
-                </div>
-
-                <div class="is-testimonial-card">
-                    <blockquote>
-                        <p>“I opted for the software testing track, and I must say the training was industry-relevant. Manual + automation with tools like Selenium gave me a solid edge.”</p>
-                        <cite>Divya Nair (Kochi)</cite>
-                    </blockquote>
-                </div>
-
-                <div class="is-testimonial-card">
-                    <blockquote>
-                        <p>“The mentors are very friendly and explain concepts clearly. I could build a full project from scratch in the Full Stack bootcamp, and that helped me during interviews.”</p>
-                        <cite>Karthik M (Coimbatore)</cite>
-                    </blockquote>
-                </div>
-
-            </div>
-        </div>
-        <div class="is-testimonials-dots">
-            <!-- Dots will be dynamically generated by JavaScript -->
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-<div class="footer-wrapper">
-    <footer class="custom-footer">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="./images/white-logo.png" alt="Custom Logo">
-                <p>Empowering learning and innovation since 2025.</p>
-            </div>
-            <div class="footer-nav">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Courses</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><a href="mailto:manu@thestackly.com">manu@thestackly.com</a></li>
-                    <li><a href="tel:+1234567890">+91 7010792745</a></li>
-                    <li><a href="#">MMR Complex, Salem , 636008</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 Stackly Learning Platform. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        </div>
-    </footer>
-</div>
-
-
-<script src="./scripts.js"></script>
+    <script src="./scripts.js"></script>
 
 </body>
+
 </html>
