@@ -1,363 +1,1299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stackly</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <script src="https://kit.fontawesome.com/e03681e89c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Title  -->
+    <title>Stackly-Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/imgs/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font -->
+    <link rel="stylesheet" href="./assets/css/satoshi.css">
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="./assets/css/plugins.css">
+
+    <!-- Core Style Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
-<body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="logo"><a href="./index.html"><img src="./images/logo.png" alt="" height="40px"></a></div>
-        <div class="right">
-            <a href="#courses"> <button class="courses">Courses</button> </a>
-            <!-- <a href="#" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #2c3e50;font-size:25px"></i></a> -->
-            <!-- <a href="./signup.html" class="icons" style="margin-left: 20px;"><i class="fa-solid fa-user" style="color: #2c3e50;font-size:25px"></i></a>
-      <a href="#" class="icons" style="margin-left: 20px;" id="top3"><i class="fa-solid fa-ellipsis-vertical" style="color: #2c3e50;font-size:25px"></i></a> -->
+<body class="startup-one">
+
+
+
+    <!-- ==================== Start Loading ==================== -->
+
+    <div class="loader-wrap">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+        </svg>
+
+        <div class="loader-wrap-heading">
+            <div class="load-text">
+                <span>L</span>
+                <span>o</span>
+                <span>a</span>
+                <span>d</span>
+                <span>i</span>
+                <span>n</span>
+                <span>g</span>
+            </div>
         </div>
     </div>
 
-    <!-- Nav Bar -->
-    <div class="nav-bar">
-    <a href="./front-end.html">Front-End Development</a>
-    <a href="./fullstack.html">Full Stack Development</a>
-    <a href="./testing.html">Software Testing</a>
-    <a href="./python.html">Python Developer</a>
-    <a href="./java.html">Java Developer</a>
-    <a href="./marketing.html">Digital Marketing</a>
-    <a href="./azure.html">Azure</a>
-    <a href="./devops.html">DevOps</a>
-    <a href="./data-analyst.html">Data Analyst</a>
-    <a href="./data-scientist.html">Data Scientist</a>
-    <a href="./ai-ml.html">AI / ML</a>
-  </div>
+    <!-- ==================== End Loading ==================== -->
 
 
+    <div class="cursor"></div>
 
-    <div class="slider-container">
-        <div class="slides">
-            <div class="slide">
-                <img src="./images/slider2.jpg" alt="Slide 1">
-                <div class="overlay">
-                    <h2>Web Development Mastery</h2>
-                    <p>Learn HTML, CSS, JavaScript, and more to build stunning websites from scratch.</p>
-                    <a href="./front-end.html"><button>Enroll Now</button></a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="./images/slider3.jpg" alt="Slide 2">
-                <div class="overlay">
-                    <h2>Full Stack Development</h2>
-                    <p>Learn to build powerful web applications from start to finish.</p>
-                    <a href="./fullstack.html"> <button>Enroll Now</button></a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="./images/slider4.jpg" alt="Slide 3">
-                <div class="overlay">
-                    <h2>Digital Marketing Pro</h2>
-                    <p>Master SEO, social media, and analytics to grow your online presence.</p>
-                    <a href="./marketing.html"> <button>Enroll Now</button></a>
-                </div>
-            </div>
-        </div>
-        <div class="dots">
-            <span class="dot" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
+
+    <!-- ==================== Start progress-scroll-button ==================== -->
+
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
     </div>
 
+    <!-- ==================== End progress-scroll-button ==================== -->
 
 
 
-    <section class="course-section" id="courses">
-        <h1>Explore Our Courses</h1>
-        <div class="course-grid">
-            <!-- Technology Courses -->
-            <div class="course-card technology show" data-course="front-end">
-                <i class="fas fa-code"></i>
-                <h3>Front End Development</h3>
-                <div class="details">
-                    <span>💰 Rs.30,000 + 18% GST</span>
-                    <span>⏳ 6 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./front-end.html"> <button class="view-btn">View</button></a>
-                    <a href="./front-end.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-            <div class="course-card technology show" data-course="full-stack">
-                <i class="fas fa-layer-group"></i>
-                <h3>Full Stack Development</h3>
-                <div class="details">
-                    <span>💰 Rs.45,000 + 18% GST</span>
-                    <span>⏳ 12 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./fullstack.html"> <button class="view-btn">View</button></a>
-                    <a href="./fullstack.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-            <div class="course-card technology show" data-course="software-testing">
-                <i class="fas fa-bug"></i>
-                <h3>Software Testing</h3>
-                <div class="details">
-                    <span>💰 Rs.25,000 + 18% GST</span>
-                    <span>⏳ 4 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./testing.html"> <button class="view-btn">View</button></a>
-                    <a href="./testing.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-            <div class="course-card technology show" data-course="java-developer">
-                <i class="fab fa-java"></i>
-                <h3>Java Developer</h3>
-                <div class="details">
-                    <span>💰 Rs.40,000 + 18% GST</span>
-                    <span>⏳ 8 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./java.html"> <button class="view-btn">View</button></a>
-                    <a href="./java.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-            <div class="course-card technology show" data-course="python-developer">
-                <i class="fab fa-python"></i>
-                <h3>Python Developer</h3>
-                <div class="details">
-                    <span>💰 Rs.35,000 + 18% GST</span>
-                    <span>⏳ 8 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./python.html"> <button class="view-btn">View</button></a>
-                    <a href="./python.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-            <!-- Digital Marketing Course -->
-            <div class="course-card digital-marketing show" data-course="digital-marketing">
-                <i class="fas fa-bullhorn"></i>
-                <h3>Digital Marketing</h3>
-                <div class="details">
-                    <span>💰 Rs.55,000 + 18% GST</span>
-                    <span>⏳ 12 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./marketing.html"> <button class="view-btn">View</button></a>
-                    <a href="./marketing.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-
-            <div class="course-card technology show" data-course="azure">
-                <i class="fas fa-cloud"></i>
-                <h3>Azure</h3>
-                <div class="details">
-                    <span>💰 Rs.55,000 + 18% GST</span>
-                    <span>⏳ 8 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./azure.html"><button class="view-btn">View</button></a>
-                    <a href="./azure.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-
-            <div class="course-card technology show" data-course="devops">
-                <i class="fas fa-cogs"></i>
-                <h3>DevOps</h3>
-                <div class="details">
-                    <span>💰 Rs.55,000 + 18% GST</span>
-                    <span>⏳ 10 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./devops.html"><button class="view-btn">View</button></a>
-                    <a href="./devops.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-
-            <div class="course-card technology show" data-course="data-analyst">
-                <i class="fas fa-chart-line"></i>
-                <h3>Data Analyst</h3>
-                <div class="details">
-                    <span>💰 Rs.75,000 + 18% GST</span>
-                    <span>⏳ 12 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./data-analyst.html"><button class="view-btn">View</button></a>
-                    <a href="./data-analyst.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-
-            <div class="course-card technology show" data-course="data-scientist">
-                <i class="fas fa-brain"></i>
-                <h3>Data Scientist</h3>
-                <div class="details">
-                    <span>💰 Rs.75,000 + 18% GST</span>
-                    <span>⏳ 16 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./data-scientist.html"><button class="view-btn">View</button></a>
-                    <a href="./data-scientist.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-
-            <div class="course-card technology show" data-course="ai-ml">
-                <i class="fas fa-robot"></i>
-                <h3>AI / Machine Learning</h3>
-                <div class="details">
-                    <span>💰 Rs.75,000 + 18% GST</span>
-                    <span>⏳ 16 Weeks</span>
-                    <!-- <span>📅 Upcoming Batch: May 12, 2025</span> -->
-                </div>
-                <div class="buttons">
-                    <a href="./ai-ml.html"><button class="view-btn">View</button></a>
-                    <a href="./ai-ml.html#apply"><button class="apply-btn">Apply</button></a>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
+    <div id="smooth-wrapper">
 
 
 
+        <!-- ==================== Start Navbar ==================== -->
 
-    <section class="video-section">
-        <h2 class="video-heading">Stackly Advantage</h2>
-        <div class="video-container">
-            <div class="video-wrapper">
-                <video id="stackly-video" muted autoplay>
-                    <source src="./images/video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <button id="mute-btn" class="mute-btn">Unmute</button>
-            </div>
-        </div>
-    </section>
+        <nav class="navbar navbar-expand-lg nav-crev">
+            <div class="container">
 
+                <!-- Logo -->
+                <a class="logo icon-img-100" href="index.html">
+                    <img src="./assets/imgs/logo-stackly (1).png" alt="logo">
+                </a>
 
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="icon-bar"><i class="fas fa-bars"></i></span>
+                </button>
 
-
-
-
-
-
-
-
-
-    <section class="is-testimonials-section">
-        <div class="is-testimonials-container">
-            <h2 class="is-testimonials-subtitle">Learner Success Stories</h2>
-            <h1 class="is-testimonials-title">Happy With Expertise</h1>
-            <div class="is-testimonials-slider">
-                <div class="is-testimonials-wrapper">
-
-                    <div class="is-testimonial-card">
-                        <blockquote>
-                            <p>“I joined the Full Stack Development course, and it completely transformed my career. The
-                                practical projects and mentoring helped me crack my first job in just 3 months.”</p>
-                            <cite>Ravi Teja (Hyderabad)</cite>
-                        </blockquote>
-                    </div>
-
-                    <div class="is-testimonial-card">
-                        <blockquote>
-                            <p>“The Digital Marketing program was exceptional! Real-time case studies and hands-on tools
-                                made it easy to understand and apply. I now run my own marketing agency.”</p>
-                            <cite>Meenakshi Suresh (Chennai)</cite>
-                        </blockquote>
-                    </div>
-
-                    <div class="is-testimonial-card">
-                        <blockquote>
-                            <p>“Frontend development always felt confusing until I joined this course. React, Bootstrap,
-                                and real-world UI projects boosted my confidence immensely.”</p>
-                            <cite>Akhil Raj (Bengaluru)</cite>
-                        </blockquote>
-                    </div>
-
-                    <div class="is-testimonial-card">
-                        <blockquote>
-                            <p>“I opted for the software testing track, and I must say the training was
-                                industry-relevant. Manual + automation with tools like Selenium gave me a solid edge.”
-                            </p>
-                            <cite>Divya Nair (Kochi)</cite>
-                        </blockquote>
-                    </div>
-
-                    <div class="is-testimonial-card">
-                        <blockquote>
-                            <p>“The mentors are very friendly and explain concepts clearly. I could build a full project
-                                from scratch in the Full Stack bootcamp, and that helped me during interviews.”</p>
-                            <cite>Karthik M (Coimbatore)</cite>
-                        </blockquote>
-                    </div>
-
-                </div>
-            </div>
-            <div class="is-testimonials-dots">
-                <!-- Dots will be dynamically generated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <div class="footer-wrapper">
-        <footer class="custom-footer">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <img src="./images/white-logo.png" alt="Custom Logo">
-                    <p>Empowering learning and innovation since 2025.</p>
-                </div>
-                <!-- <div class="footer-nav">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div> -->
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li><a href="mailto:manu@thestackly.com">manu@thestackly.com</a></li>
-                        <li><a href="tel:+1234567890">+91 7010792745</a></li>
-                        <li><a href="#">MMR Complex, Salem , 636008</a></li>
+                <!-- navbar links -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#0" data-scroll-nav="0"><span class="rolling-text">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./services.html" ><span
+                                    class="rolling-text">Services</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html" ><span
+                                    class="rolling-text">About</span></a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="./portfolio-standard.html" ><span
+                                    class="rolling-text">Portfolio</span></a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="./team.html" ><span class="rolling-text">Team</span></a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="./blog.html" ><span class="rolling-text">Blog</span></a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact us.html"><span
+                                    class="rolling-text">Contact</span></a>
+                        </li>
                     </ul>
                 </div>
+
+                <div class="topnav">
+                    <div class="menu-icon cursor-pointer">
+                        <span class="icon ti-align-right"></span>
+                    </div>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 Stackly Learning Platform. All rights reserved. | <a href="#">Privacy Policy</a> | <a
-                        href="#">Terms of Service</a></p>
+        </nav>
+
+        <div class="hamenu one-scroll">
+            <div class="logo icon-img-100">
+                <img src="./assets/imgs/logo-stackly (1).png" alt="">
             </div>
-        </footer>
+            <div class="close-menu cursor-pointer ti-close"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="menu-text">
+                            <div class="text">
+                                <h2>Menu</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="menu-links">
+                            <ul class="main-menu rest">
+                                <li data-scroll-nav="0">
+                                    <div class="o-hidden">
+                                        <div class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="Home">Home</span></div>
+                                    </div>
+                                </li>
+                                <li >
+                                    <a href="./services.html">
+                                    <div class="o-hidden">
+                                        <div  class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="Services">Services</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li>
+                                <li >
+                                    <a href="./about.html">
+                                    <div class="o-hidden">
+                                        <div class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="About">About</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li>
+                                <!-- <li >
+                                    <a href="./portfolio-standard.html">
+                                    <div class="o-hidden">
+                                        <div class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="Portfolio">Portfolio</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li> -->
+                                <!-- <li >
+                                    <a href="./team.html">
+                                    <div class="o-hidden">
+                                        <div class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="Team">Team</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li> -->
+                                <!-- <li data-scroll-nav="5">
+                                    <div class="o-hidden">
+                                        <div class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="Blogs">Blogs</span>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                <li >
+                                    <a href="./contact us.html">
+                                    <div class="o-hidden">
+                                        <div class="link cursor-pointer dmenu"><span class="fill-text"
+                                                data-text="Contact">Contact</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="cont-info">
+                            <div class="item mb-50">
+                                <h6 class="sub-title mb-15 opacity-7">Headquarters</h6>
+                                <h5>MMR COMPLEX, <br> SALEM, Tamil Nadu 636008 ·</h5>
+                            </div>
+                            <div class="item mb-50">
+                                <h6 class="sub-title mb-15 opacity-7">Social Media</h6>
+                                <ul class="rest social-text">
+                                    <li class="mb-10">
+                                        <a href="https://www.facebook.com/share/1BrqaZkJRe/" target="_blank"><span class="hover-anim">Facebook</span></a>
+                                    </li>
+                                    <li class="mb-10">
+                                        <a href="https://x.com/The_Stackly" target="_blank"><span class="hover-anim">Twitter</span></a>
+                                    </li>
+                                    <li class="mb-10">
+                                        <a href="https://www.linkedin.com/company/the-stackly/" target="_blank"><span class="hover-anim">LinkedIn</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/thestackly" target="_blank"><span class="hover-anim">Instagram</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item mb-40">
+                                <h6 class="sub-title mb-15 opacity-7">Contact Us</h6>
+                                <h5><a href="#0">info@thestackly.com</a></h5>
+                                <h5 class="underline mt-10"><a href="https://wa.me/7010792745" target="_blank">+91 70107 92745</a></h5> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== End Navbar ==================== -->
+
+
+
+        <div id="smooth-content">
+
+            <main class="main-bg">
+
+
+                <!-- ==================== Start Header ==================== -->
+
+                <header class="startup-header" data-scroll-index="0">
+                    <div class="valign" data-overlay-dark="5">
+                        <div class="head-container">
+
+                            <div class="text-container">
+                                <h3 style="font-size: 38px;">"Empowering businesses with cutting-edge solutions."</h3> &nbsp;
+                                <p style="font-size: 18px; font-weight:400;">We are a forward-thinking IT company specializing in innovative technology solutions that drive business transformation. From software development to IT consulting, we deliver tailored services to enhance efficiency, streamline processes, and foster growth for businesses of all sizes.
+                                </p> &nbsp;
+                                <h5>Solutions that power success.</h5>
+                            </div>
+
+                            <img src="./assets/imgs/background/bubble-bg.png" alt="" class="bubble-bg">
+                            <img src="./assets/imgs/background/banner-thumb-bg.png" alt="" class="bubble-thumb-bg">
+
+                        </div>
+                    </div>
+                </header>
+
+                <!-- ==================== End Header ==================== -->
+
+
+
+                <!-- ==================== Start Services ==================== -->
+
+                <section class="services-crev section-padding" data-scroll-index="1">
+                    <div class="container">
+                        <div class="sec-head mb-80">
+                            <h6 class="sub-title main-color mb-25">Our Specialize</h6>
+                            <div class="bord pt-25 bord-thin-top d-flex align-items-center">
+                                <h2 class="fw-600 text-u ls1">What We <span class="fw-200"> Offer</span></h2>
+                                <div class="ml-auto">
+                                    <!-- <a href="./services.html" class="go-more"> -->
+                                        <!-- <span class="text">View all Services</span> -->
+                                        <!-- <span class="icon ti-arrow-top-right"></span> -->
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                    
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="item-box mb-30">
+                                    <div class="d-flex align-items-end">
+                                        <div>
+                                            <a href="./sub-service/service1.html">
+                                            <span class="num fz-20">01.</span>
+                                            <div class="icon mr-80">
+                                                <img src="./assets/imgs/serv-icons/3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5>UI/UX Design</h5>
+                                            <div class="text mt-30">
+                                                <p class="mb-80">Mobile applications can be built for specific operating systems, such as iOS
+                                                     or Android , or as cross-platform apps
+                                                    that work on multiple platforms.
+                                                </p>
+                                            </div>
+                                                <!-- <span>View More</span> -->
+                                                <!-- <span class="icon ti-arrow-top-right"></span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item-box mb-30">
+                                    <div class="d-flex align-items-end">
+                                        <div>
+                                            <a href="./sub-service/service2.html">
+                                            <span class="num fz-20">02.</span>
+                                            <div class="icon mr-80">
+                                                <img src="./assets/imgs/serv-icons/4.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5>Digital Marketing</h5>
+                                            <div class="text mt-30">
+                                                <p class="mb-80">Digital marketing branding design focuses on creating a cohesive brand
+                                                    identity. It combines visual elements, messaging, and strategy to enhance
+                                                    recognition. 
+                                                </p>
+                                            </div>
+                                                <!-- <span>View More</span> -->
+                                                <!-- <span class="icon ti-arrow-top-right"></span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item-box md-mb30">
+                                    <div class="d-flex align-items-end">
+                                        <div>
+                                            <a href="./sub-service/service3.html">
+                                            <span class="num fz-20">03.</span>
+                                            <div class="icon mr-80">
+                                                <img src="./assets/imgs/serv-icons/5.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5>Web Developments</h5>
+                                            <div class="text mt-30">
+                                                <p class="mb-80">Developers can deploy hybrid apps across
+                                                    multiple platforms like iOS and Android, saving time and cost compared to
+                                                    building separate native apps.
+                                                </p>
+                                            </div>
+                                                <!-- <span>View More</span> -->
+                                                <!-- <span class="icon ti-arrow-top-right"></span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item-box">
+                                    <div class="d-flex align-items-end">
+                                        <div>
+                                            <a href="./sub-service/service4.html">
+                                            <span class="num fz-20">04.</span>
+                                            <div class="icon mr-80">
+                                                <img src="./assets/imgs/serv-icons/6.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h5>AI and Automation</h5>
+                                            <div class="text mt-30">
+                                                <p class="mb-80">AI enables systems to perform tasks that typically require human cognitive abilities
+                                                    such as learning, problem-solving, and decision-making.
+                                                </p>
+                                            </div>
+                                                <!-- <span>View More</span> -->
+                                                <!-- <span class="icon ti-arrow-top-right"></span> -->
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./services.html" class="go-more gone">
+                        <span class="text">View all</span>
+                        <span class="icon ti-arrow-top-right"></span>
+                    </a>
+                </section>
+
+                <!-- ==================== End Services ==================== -->
+
+
+
+                <!-- ==================== Start about ==================== -->
+
+                <section class="about" data-scroll-index="2">
+                    <div class="container section-padding bord-thin-top">
+                        <div class="row md-marg">
+                            <div class="col-lg-6">
+                                <div class="cont md-mb50">
+                                    <h6 class="sub-title main-color mb-15">Who We Are</h6>
+                                    <h4>With vast experience in project management, our team delivers practical expertise.
+                                    </h4> &nbsp;
+                                    <a href="./about.html" class="d-flex align-items-end">
+                                        <span class="sub-title nowrap">About Us</span>
+                                        <!-- <span class="fz-70 line-height-35 ti-arrow-top-right"></span> -->
+                                    </a>
+                                    &nbsp;
+                                    <p>Founded in 2015, Stackly has grown into one of the leading and most innovative IT companies in the industry. With a team of over 120 talented professionals, we specialize in delivering cutting-edge technology solutions that drive business success. Our commitment to innovation, excellence, and customer satisfaction has positioned us as a trusted partner for businesses seeking to leverage technology for growth and efficiency.
+                                    </p> &nbsp;
+                                    <h5>Innovating today for a smarter tomorrow.</h5>
+                                    <!-- <div class="d-flex align-items-end mt-100">
+                                        <div> 
+                                            <a href="./about.html" class="d-flex align-items-end">
+                                                <span class="sub-title nowrap">About Us</span>
+                                                <span class="fz-70 line-height-45 ti-arrow-top-right"></span>
+                                            </a>
+                                         </div> 
+                                        <div class="ml-80"> 
+                                            <p>Founded in 2015, Stackly has grown into one of the leading and most innovative IT companies in the industry. With a team of over 120 talented professionals, we specialize in delivering cutting-edge technology solutions that drive business success. Our commitment to innovation, excellence, and customer satisfaction has positioned us as a trusted partner for businesses seeking to leverage technology for growth and efficiency.
+                                            </p>
+                                        </div> 
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="img-vid">
+                                    <img src="./assets/imgs/intro/2.jpg" alt="">
+                                    <div class="curv-butn main-bg">
+                                        <a href="./video-pages/video1.html"  class="vid">
+                                            <div class="icon">
+                                                <i class="fas fa-play"></i>
+                                            </div>
+                                        </a>
+                                       
+                                        
+                                       
+                                        <div class="shap-left-top">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="w-11 h-11">
+                                                <path
+                                                    d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                    fill="#1a1a1a"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="shap-right-bottom">
+                                            <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                class="w-11 h-11">
+                                                <path
+                                                    d="M11 1.54972e-06L0 0L2.38419e-07 11C1.65973e-07 4.92487 4.92487 1.62217e-06 11 1.54972e-06Z"
+                                                    fill="#1a1a1a"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+</section>
+
+<section>
+    <div class="container section-padding bord-thin-top">
+         <div class="row md-marg">
+            <div class="col-lg-6">
+                <div class="img-vid1">
+                    <center>
+                        <img src="./assets/imgs/PREYFOX LCC.png" alt=""  style="filter: invert(1); max-height: 200px; width: auto; " >
+                    </center>
+                    
+                </div>
+        </div> 
+            <div class="col-lg-6">
+                <div class="ml-80">
+                    <p>Stackly and Preyfox LLC are sister concerns, jointly leading innovation in the IT and ITES industries. While Preyfox LLC manages operations in the United States, Stackly oversees operations in India. Together, they are committed to delivering cutting-edge solutions and driving technological advancements across global markets.
+                    </p>
+                    <a href="https://preyfox.com/" target="_blank" class="go-more gone">
+                        <span class="text">Visit Site</span>
+                        <span class="icon ti-arrow-top-right"></span>
+                    </a>
+                </div>
+            </div>
+            
+         </div> 
+    </div>
+</section>
+                <!-- ==================== End about ==================== -->
+                 
+
+
+
+                <!-- ==================== Start Marquee ==================== -->
+
+                <section>
+                    <div class="main-marq xlrg o-hidden">
+                        <div class="slide-har st1">
+                            <div class="box">
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Web
+                                            Development</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Digital
+                                            Marketing</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Mob App
+                                            Development</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Product
+                                            Design</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>AI
+                                            Automation</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Data
+                                            Processing</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Data
+                                            Insights</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span> Form
+                                            Filling</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>Voice
+                                            Process</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                                <div class="item">
+                                    <h4 class="d-flex align-items-center"><span>E-Pub &
+                                            XML</span>
+                                        <span class="fz-50 ml-50 stroke icon">*</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> &nbsp;
+
+                <!-- ==================== End Marquee ==================== -->
+
+
+
+                <!-- ==================== Start Portfolio ==================== -->
+
+                <!-- <section class="portfolio-tab crev section-padding" data-scroll-index="3">
+                    <div class="container">
+                        <div class="sec-head mb-80">
+                            <h6 class="sub-title main-color mb-25">Our Portfolio</h6>
+                            <div class="bord pt-25 bord-thin-top d-flex align-items-center">
+                                <h2 class="fw-600 text-u ls1">Featured <span class="fw-200">projects</span></h2>
+                                <div class="ml-auto"> -->
+                                    <!-- <a href="./portfolio-standard.html" class="go-more"> -->
+                                        <!-- <span class="text">View all Works</span> -->
+                                        <!-- <span class="icon ti-arrow-top-right"></span> -->
+                                    <!-- </a> -->
+                                <!-- </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-5 d-flex align-items-center justify-content-center">
+                                <div class="glry-img">
+                                    <div id="tab-1" class="bg-img tab-img current"
+                                        data-background="./assets/imgs/works1/1.png"></div>
+                                    <div id="tab-2" class="bg-img tab-img" data-background="./assets/imgs/works1/2.png">
+                                    </div>
+                                    <div id="tab-3" class="bg-img tab-img" data-background="./assets/imgs/works1/3.jpg">
+                                    </div>
+                                    <div id="tab-4" class="bg-img tab-img" data-background="./assets/imgs/works1/4.png">
+                                    </div>
+                                    <div id="tab-5" class="bg-img tab-img" data-background="./assets/imgs/works1/5.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 offset-lg-1 content">
+                                <div class="cluom mb-30 current" data-tab="tab-1">
+                                    <div class="info">
+                                        <h6 class="sub-title opacity-7">Aaremvalleycastle</h6> -->
+                                        <!-- <h4>Iridescent Wallpapers</h4> -->
+                                         <!-- <a href="https://www.aaremvalleycastle.com/" >https://www.aaremvalleycastle.com/</a>
+
+                                    </div>
+                                    <div class="img">
+                                        <img src="./assets/imgs/works1/1.jpg" alt="">
+                                    </div>
+                                    <div class="more text-u ls1 fz-12">
+                                        <a href="https://www.aaremvalleycastle.com/" target="_blank">View Project <i
+                                                class="ml-15 ti-arrow-top-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cluom mb-30" data-tab="tab-2">
+                                    <div class="info">
+                                        <h6 class="sub-title opacity-7">Interstellar-travels</h6> -->
+                                        <!-- <h4>Proof Template</h4> -->
+                                        <!-- <a href="https://www.interstellar-travels.in/" >https://www.interstellar-travels.in/</a>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./assets/imgs/works1/2.jpg" alt="">
+                                    </div>
+                                    <div class="more text-u ls1 fz-12">
+                                        <a href="https://www.interstellar-travels.in/" target="_blank">View Project <i
+                                                class="ml-15 ti-arrow-top-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cluom mb-30" data-tab="tab-3">
+                                    <div class="info">
+                                        <h6 class="sub-title opacity-7">Bluemedhealthcare</h6> -->
+                                        <!-- <h4>Ledge Phone</h4> -->
+                                        <!-- <a href="https://www.bluemedhealthcare.com/" >https://www.bluemedhealthcare.com/</a>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./assets/imgs/works1/3.png" alt="">
+                                    </div>
+                                    <div class="more text-u ls1 fz-12">
+                                        <a href="https://www.bluemedhealthcare.com/"target="_blank">View Project <i
+                                                class="ml-15 ti-arrow-top-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cluom mb-30" data-tab="tab-4">
+                                    <div class="info">
+                                        <h6 class="sub-title opacity-7">Indtiles</h6> -->
+                                        <!-- <h4>Frame Sans</h4> -->
+                                        <!-- <a href="https://indtiles.com/" >https://indtiles.com/</a>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./assets/imgs/works1/4.png" alt="">
+                                    </div>
+                                    <div class="more text-u ls1 fz-12">
+                                        <a href="https://indtiles.com/" target="_blank">View Project <i
+                                                class="ml-15 ti-arrow-top-right"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cluom" data-tab="tab-5">
+                                    <div class="info">
+                                        <h6 class="sub-title opacity-7">krisdiamant</h6> -->
+                                        <!-- <h4>Modern Minimalist</h4> -->
+                                        <!-- <a href="https://www.krisdiamant.com/" >https://www.krisdiamant.com/</a>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./assets/imgs/works1/5.png" alt="">
+                                    </div>
+                                    <div class="more text-u ls1 fz-12">
+                                        <a href="https://www.krisdiamant.com/" target="_blank">View Project <i
+                                                class="ml-15 ti-arrow-top-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+
+                <!-- ==================== End Portfolio ==================== -->
+
+
+
+                <!-- ==================== Start image scale ==================== -->
+
+                <div class="in-box mb-15">
+
+                    <div class="img-scale">
+                        <div class="image" data-overlay-dark="4">
+                            <div class="img">
+                                <img id="grow" src="./assets/imgs/background/2.jpg" data-speed="0.2" data-lag="0"
+                                    alt="">
+                                <a href="./video-pages/video1.html" 
+                                    class="vid vid-circle d-flex align-items-center justify-content-center">
+                                    <span class="icon fz-50 ti-control-play"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ==================== End image scale ==================== -->
+
+
+
+                <!-- ==================== Start about ==================== -->
+
+                <section class="about-crev section-padding sub-bg position-re ontop" data-scroll-index="4">
+                    <div class="container">
+                        <div class="row lg-marg">
+                            <div class="col-lg-6">
+                                <div class="left-block mt-100 md-mb50">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <div class="info">
+                                                <!-- <h6>Sam <br> Peterson</h6>
+                                                <p class="nowrap">Ceo Manager</p> -->
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="img fit-img radius-30">
+                                                <img src="./assets/imgs/intro/03.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mz-shap"><svg height="100%" viewBox="0 0 610 547" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M116.134 529.548C116.134 538.642 123.506 546.015 132.6 546.015H211.63C211.635 546.015 211.638 546.011 211.638 546.007V546.007C211.638 546.003 211.642 545.999 211.646 545.999H592.691C601.786 545.999 609.158 538.627 609.158 529.533L609.157 251.366C609.157 242.272 601.785 234.899 592.691 234.899H401.097C392.003 234.899 384.631 227.527 384.631 218.433V112.465C384.631 103.371 377.259 95.999 368.164 95.999H214.466C205.372 95.999 198 88.6268 198 79.5327V16.4662C198 7.37219 190.628 0 181.534 0H88.4662C79.3722 0 72 7.37219 72 16.4662V104.534C72 113.628 79.3722 121 88.4662 121H166.917C176.011 121 183.383 128.372 183.383 137.466V273.565C183.383 282.659 176.011 290.031 166.917 290.031H116.134H116.134H16.5634C7.46936 290.031 0.0971666 297.403 0.0971666 306.497V445.923C0.0971666 455.017 7.46935 462.39 16.5634 462.39H99.6677C108.762 462.39 116.134 469.762 116.134 478.856V529.548Z"
+                                                fill="#1a1a1a"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 valign">
+                                <div class="content full-width">
+                                    <div class="sec-head mb-30">
+                                        <h6 class="sub-title mb-15 main-color">Our Skills</h6>
+                                        <h2>The ultmiate guide to marketing success.</h2>
+                                    </div>
+                                    <div class="row justify-content-end">
+                                        <div class="col-lg-11">
+                                            <!-- <div class="text">
+                                                <p>We shifted our talents to frontier science because we wanted our work
+                                                    to have tangible, human-positive impact. Also, we get front row
+                                                    seats to the future.</p>
+                                            </div> -->
+                                            <div class="mt-50">
+                                                <div class="skills-box">
+                                                    <div class="skill-item mb-40">
+                                                        <h5 class="sub-title mb-15">Web Application</h5>
+                                                        <div class="skill-progress">
+                                                            <div class="progres" data-value="95%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="skill-item mb-40">
+                                                        <h5 class="sub-title mb-15">Mobile Application</h5>
+                                                        <div class="skill-progress">
+                                                            <div class="progres" data-value="90%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="skill-item mb-40">
+                                                        <h5 class="sub-title mb-15">Digital Marketing</h5>
+                                                        <div class="skill-progress">
+                                                            <div class="progres" data-value="92%"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="skill-item">
+                                                        <h5 class="sub-title mb-15">Artificial Inteligent & Real Estate</h5>
+                                                        <div class="skill-progress">
+                                                            <div class="progres" data-value="88%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="team section-padding pb-0">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="item md-mb50">
+                                        <div class="img">
+                                            <img src="./assets/imgs/team/m1.webp" alt="">
+                                            <div class="info">
+                                                <span class="fz-12">HR Department</span>
+                                                <h6 class="fz-18">MANIKANDAN</h6>
+                                            </div>
+                                        </div>
+                                        <div class="social">
+                                            <div class="links">
+                                                <a href="#0">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a href="#0">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                                <a href="#0">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item md-mb50">
+                                        <div class="img">
+                                            <img src="./assets/imgs/team/g1.webp" alt="">
+                                            <div class="info">
+                                                <span class="fz-12">Project Manager</span>
+                                                <h6 class="fz-18">YAMUNA</h6>
+                                            </div>
+                                        </div>
+                                        <div class="social">
+                                            <div class="links">
+                                                <a href="#0">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a href="#0">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                                <a href="#0">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="./assets/imgs/team/g5.webp" alt="">
+                                            <div class="info">
+                                                <span class="fz-12">Digital Marketer</span>
+                                                <h6 class="fz-18">NANDHINI</h6>
+                                            </div>
+                                        </div>
+                                        <div class="social">
+                                            <div class="links">
+                                                <a href="#0">
+                                                    <i class="fab fa-facebook-f"></i>
+                                                </a>
+                                                <a href="#0">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                                <a href="#0">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <a href="./team.html" class="go-more gone">
+                       <span class="text">View all</span>
+                       <span class="icon ti-arrow-top-right"></span>
+                   </a>
+                </section>
+                <!-- ==================== End about ==================== -->
+
+
+
+                <!-- ==================== Start Testimonials ==================== -->
+
+                <section class="testimonials section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="sec-head">
+                                    <h6 class="sub-title main-color mb-15">Testimonials</h6>
+                                    <h3 class="fw-600">What People <span class="fw-200">Say?</span></h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 position-re">
+                                <div class="testim-swiper" data-carousel="swiper" data-loop="true" data-space="30">
+                                    <div id="content-carousel-container-unq-testim" class="swiper-container"
+                                        data-swiper="container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="content">
+                                                        <div class="text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="256.721"
+                                                                height="208.227" viewBox="0 0 256.721 208.227"
+                                                                class="qout-svg">
+                                                                <path data-name="Path"
+                                                                    d="M-23.723-530.169v97.327H-121.05v-68.7q0-40.076,13.359-73.472T-62.845-639.9l36.259,28.625Q-63.8-570.244-68.57-530.169Zm158.395,0v97.327H37.345v-68.7q0-40.076,13.359-73.472T95.55-639.9l36.259,28.625Q94.6-570.244,89.825-530.169Z"
+                                                                    transform="translate(121.55 640.568)" fill="none"
+                                                                    stroke="#fff" stroke-width="1" opacity="0.322">
+                                                                </path>
+                                                            </svg>
+                                                            <p class="fz-30">I have been hiring people in this space for several years and have never seen this level of
+                                                                professionalism. It feels like you are working with a team that can get the job done.</p>
+                                                        </div>
+                                                        <div
+                                                            class="info d-flex align-items-center pt-40 mt-40 bord-thin-top">
+                                                            <div>
+                                                                <div class="fit-img circle">
+                                                                    <img src="./assets/imgs/testim/m1.webp" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="ml-20">
+                                                                <h5>Joe Davis</h5>
+                                                                <span class="sub-title main-color">
+                                                                    CEO</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item">
+                                                    <div class="content">
+                                                        <div class="text">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="256.721"
+                                                                height="208.227" viewBox="0 0 256.721 208.227"
+                                                                class="qout-svg">
+                                                                <path data-name="Path"
+                                                                    d="M-23.723-530.169v97.327H-121.05v-68.7q0-40.076,13.359-73.472T-62.845-639.9l36.259,28.625Q-63.8-570.244-68.57-530.169Zm158.395,0v97.327H37.345v-68.7q0-40.076,13.359-73.472T95.55-639.9l36.259,28.625Q94.6-570.244,89.825-530.169Z"
+                                                                    transform="translate(121.55 640.568)" fill="none"
+                                                                    stroke="#fff" stroke-width="1" opacity="0.322">
+                                                                </path>
+                                                            </svg>
+                                                            <p class="fz-30">I have been hiring people in this
+                                                                space for a number of years
+                                                                and I have never seen this level of
+                                                                professionalism. It really feels like you are
+                                                                working with a team that can get the job
+                                                                done.</p>
+                                                        </div>
+                                                        <div
+                                                            class="info d-flex align-items-center pt-40 mt-40 bord-thin-top">
+                                                            <div>
+                                                                <div class="fit-img circle">
+                                                                    <img src="./assets/imgs/testim/m2.webp" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div class="ml-20">
+                                                                <h5>Daniel Roden</h5>
+                                                                <span class="sub-title main-color">Managing Director</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-arrow-control control-abslout">
+                                    <div class="swiper-button-prev">
+                                        <span class="ti-arrow-left"></span>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <span class="ti-arrow-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-line">
+                        <div class="line-overlay">
+                            <svg viewBox="0 0 1728 1101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M-43 773.821C160.86 662.526 451.312 637.01 610.111 733.104C768.91 829.197 932.595 1062.9 602.782 1098.75C272.969 1134.6 676.888 25.4306 1852 1"
+                                    style="stroke-dasharray: 3246.53, 0;"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- ==================== End Testimonials ==================== -->
+                
+
+
+                <!-- ==================== Start clients ==================== -->
+
+                <!-- <section class="clients-carso section-padding pt-0">
+                    <div class="container">
+                        <div class="sec-bottom mb-100">
+                            <div class="main-bg d-flex align-items-center">
+                                <h6 class="fz-14 fw-400">More than <span class="fw-600">200+ companies</span>
+                                    trusted us
+                                    worldwide</h6>
+                            </div>
+                        </div>
+                        <div class="swiper5" data-carousel="swiper" data-items="5" data-loop="true" data-space="40">
+                            <div id="content-carousel-container-unq-clients" class="swiper-container"
+                                data-swiper="container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img icon-img-100">
+                                                <img src="./assets/imgs/brands/b1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img icon-img-100">
+                                                <img src="./assets/imgs/brands/b2.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img icon-img-100">
+                                                <img src="./assets/imgs/brands/b3.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img icon-img-100">
+                                                <img src="./assets/imgs/brands/b4.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="item">
+                                            <div class="img icon-img-100">
+                                                <img src="./assets/imgs/brands/b6.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+
+                <!-- ==================== End clients ==================== -->
+
+
+
+                <!-- ==================== Start Blog ==================== -->
+
+                <!-- <section class="blog-list-half section-padding sub-bg" data-scroll-index="5">
+                    <div class="container">
+                        <div class="sec-head mb-80">
+                            <h6 class="sub-title main-color mb-25">Our Blog</h6>
+                            <div class="bord pt-25 bord-thin-top d-flex align-items-center">
+                                <h2 class="fw-600">Read Latest <span class="fw-200">News</span></h2>
+                                <div class="ml-auto">
+                                     <a href="blog-list2.html" class="go-more">
+                                        <span class="text">View all posts</span>
+                                        <span class="icon ti-arrow-top-right"></span>
+                                    </a> -->
+                                <!-- </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="item main-bg md-mb50">
+                                    <div class="row rest">
+                                        <div class="col-lg-6 col-md-5 img rest">
+                                            <img src="./assets/imgs/blog/b/2.jpg" alt="" class="img-post">
+                                            <div class="author d-flex align-items-center">
+                                                <div>
+                                                    <div class="fit-img icon-img-50 circle">
+                                                        <img src="./assets/imgs/blog/author.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="ml-15 fz-14">
+                                                    <div><span class="opacity-7">Posted by</span><br>Stackly</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-7 cont valign">
+                                            <div class="full-width">
+                                                <div class="tags mb-15">
+                                                    <a href="blog-list.html">Marketing</a>
+                                                </div>
+                                                <h5>
+                                                    <a href="blog-details.html">Free advertising for your online
+                                                        business.</a>
+                                                </h5>
+                                                <span class="date fz-12 ls1 text-u opacity-7 mt-80">August 6,
+                                                    2022</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="item main-bg">
+                                    <div class="row rest">
+                                        <div class="col-lg-6 col-md-5 img rest">
+                                            <img src="./assets/imgs/blog/b/3.jpg" alt="" class="img-post">
+                                            <div class="author d-flex align-items-center">
+                                                <div>
+                                                    <div class="fit-img icon-img-50 circle">
+                                                        <img src="./assets/imgs/blog/author.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="ml-15 fz-14">
+                                                    <div><span class="opacity-7">Posted by</span><br>Stackly</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-7 cont valign">
+                                            <div class="full-width">
+                                                <div class="tags mb-15">
+                                                    <a href="blog-list.html">Marketing</a>
+                                                    <a href="blog-list.html">Design</a>
+                                                </div>
+                                                <h5>
+                                                    <a href="blog-details.html">Business meeting 2023 in San
+                                                        Francisco.</a>
+                                                </h5>
+                                                <span class="date fz-12 ls1 text-u opacity-7 mt-80">August 6,
+                                                    2022</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section> --> 
+
+                <!-- ==================== End Blog ==================== -->
+
+
+
+                <!-- ==================== Start Contact ==================== -->
+
+                <section class="contact section-padding" data-scroll-index="6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 valign">
+                                <div class="sec-head info-box full-width md-mb80">
+                                     <div class="phone fz-30 fw-600 underline main-color">
+                                        <h6 class="mb-15" style="color: white;">Whatsapp</h6>
+                                        <a href="https://wa.me/7010792745" target="_blank" style="font-size: 16px; text-decoration:none; color: #c6c8c9;">+91 70107 92745</a>
+                                    </div> 
+                                    <div class="morinfo mt-50 pb-30 bord-thin-bottom">
+                                        <h6 class="mb-15">Headquarters</h6>
+                                        <p>MMR COMPLEX,
+                                            SALEM, Tamil Nadu 636008 ·</p>
+                                    </div>
+                                    <div class="morinfo mt-30 pb-30 bord-thin-bottom">
+                                        <h6 class="mb-15">Email</h6>
+                                        <p>info@thestackly.com</p>
+                                    </div>
+
+                                    <div class="social-icon-circle mt-50 ">
+                                        <a href="https://www.facebook.com/share/1BrqaZkJRe/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                                        <!-- <a href="#0"><i class="fa-brands fa-whatsapp"></i></a> -->
+                                        <a href="https://www.linkedin.com/company/the-stackly/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="https://www.instagram.com/thestackly" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://x.com/The_Stackly" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 offset-lg-1 valign">
+                                <div class="full-width">
+                                    <div class="sec-head mb-50">
+                                        <h6 class="sub-title main-color mb-15">Let's Chat</h6>
+                                        <h3 class="text-u ls1">Send a <span class="fw-200">message</span></h3>
+                                    </div>
+                                    <form id="contact-form" class="form2" method="post" action="./contact.php">
+
+                                        <div class="messages"></div>
+
+                                        <div class="controls row">
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-30">
+                                                    <input id="form_name" type="text" name="name" placeholder="Name"
+                                                        required="required">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-30">
+                                                    <input id="form_email" type="email" name="email" placeholder="Email"
+                                                        required="required">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="form-group mb-30">
+                                                    <input id="form_subject" type="text" name="subject"
+                                                        placeholder="Subject">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <textarea id="form_message" name="message" placeholder="Message"
+                                                        rows="4" required="required"></textarea>
+                                                </div>
+                                                <div class="mt-30">
+                                                    <button type="submit" class="butn butn-full butn-bord radius-30">
+                                                        <span class="text">Let's Talk</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ==================== End Contact ==================== -->
+
+
+            </main>
+
+
+            <!-- ==================== Start Footer ==================== -->
+
+            <footer class="min-footer sub-bg pt-30 pb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 md-mb15">
+                            <div class="logo icon-img-100">
+                                <img src="./assets/imgs/logo-stackly (1).png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 order-md-0 md-mb15">
+                            <div class="links d-flex justify-content-center">
+                                <ul class="rest d-flex align-items-center">
+                                    
+                                    <li class="ml-20">
+                                        <a href="./career.html">Careers</a>
+                                    </li>
+                                    <li class="ml-20">
+                                        <a href="./contact us.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-end col-lg-4 col-md-12 md-mb15 flexibility links d-flex justify-content-end">
+                            <p class="fz-14 rest d-flex align-items-center">© 2025 Copyright Stackly. All Rights Reserved.  <span class="underline main-color"><a
+                                       href="https://themeforest.net/user/STACKLY"
+                                        target="_blank"></a></span>  </p> 
+                       </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- ==================== End Footer ==================== -->
+
+
+        </div>
+
     </div>
 
 
-    <script src="./scripts.js"></script>
+
+
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery-migrate-3.4.0.min.js"></script>
+
+    <!-- plugins -->
+    <script src="./assets/js/plugins.js"></script>
+
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollSmoother.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/smoother-script.js"></script>
+
+    <!-- custom scripts -->
+    <script src="./assets/js/scripts.js"></script>
+
 
 </body>
-
+    
 </html>
